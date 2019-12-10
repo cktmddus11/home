@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<decorators defaultdir="/decorator">
+ 	<decorator name="main" page="decorator2.jsp">
+		<pattern>/member/*</pattern>
+		<pattern>/board/*</pattern>
+	</decorator> 
+	<!--  따로 갈때는 이렇게 하고 둘다 같은데로 할거면 위로  -->
+<!-- 	<decorator name="member" page="decorator.jsp">
+			<pattern>/model2/member/*</pattern>
+	</decorator>-->
+	
+	<decorator name="main2" page="decorator3.jsp">
+			<pattern>/member/JoinForm*</pattern>
+			<pattern>/member/loginForm*</pattern>
+			<pattern>/member/IdCheckForm.do</pattern>
+	</decorator> 
+	<excludes>
+	<!-- 	<pattern>/member/loginForm.do</pattern>  저 경로에있는거 decorate 제외하는거
+		<pattern>/member/JoinForm.do</pattern> -->
+		<pattern>/member/select.do</pattern>
+		<pattern>/member/select2.do</pattern>
+		<pattern>/member/grade_info.do</pattern>
+		<pattern>/member/grade_info2.do</pattern>
+		<pattern>/member/updatedelete.do</pattern>
+		<pattern>/member/exchange.do</pattern>
+		<pattern>/member/subject_info.do</pattern>
+		<pattern>/member/graph.do</pattern>
+		<pattern>/member/graph2.do</pattern>
+		<pattern>/member/gradeview2.do</pattern>	
+		<pattern>/board/imgupload*</pattern>
+		<pattern>/member/pictureForm.do</pattern>
+		<pattern>/member/picture.do</pattern>
+		<pattern>/member/gradedelete*</pattern>
+		<pattern>/member/passwor*</pattern>
+		<pattern>/member/updateForm*</pattern>
+	<!-- 	<pattern>/member/joinForm2.do</pattern> -->
+		<!-- <pattern>/model2/member/upload*</pattern> -->
+		<pattern>/member/MemberIdCheckActio*</pattern>
+		<pattern>/board/commentdelete*</pattern>
+		<pattern>/member/secession*</pattern>
+	</excludes>
+</decorators>
