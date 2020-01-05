@@ -5,7 +5,7 @@
  	</decorator>
  <!--  상품리스트 -->
 	<decorator name="main2" page="decorator2.jsp">
- 		<pattern>/product/list*</pattern>
+ 		<pattern>/product/*</pattern>
  	</decorator>
  	<!--  매장소개 -->
  	<decorator name="main3" page="decorator3.jsp">

@@ -4,7 +4,9 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-logomodern-business-nav/blob/master/LICENSE)
  */
 body {
-  padding-top: 56px;
+   padding-top: 56px; 
+ /*  padding-top: 0px; 메뉴 위에 공간 생기는데 ㅜ
+ 이거하면 list쪽이 이상해짐 */
 }
 
 .carousel-item {

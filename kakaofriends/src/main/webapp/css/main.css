@@ -39,6 +39,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
+/* 별점 */
 @font-face {
   font-family: Poppins-Regular;
   src: url('../fonts/Poppins/Poppins-Regular.ttf'); 
@@ -275,7 +276,8 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   background-color: transparent;
   width: 100%;
   height: 84px;
-  top: 40px;
+  /* top: 40px; */
+  top: 0px;
   left: 0px; 
 
   -webkit-transition: height 0.3s, background-color 0.3s;
@@ -1900,7 +1902,64 @@ input.num-product::-webkit-inner-spin-button {
   visibility: visible;
   opacity: 1;
 }
+/* [ Modal2 ]*/
+/* //////////////// */
 
+.wrap-modal2 {
+  padding-left: 30%; 
+  padding-right: 30%; 
+  padding-top : 10%; 	
+	
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 9000;
+  overflow: auto;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  transition: all 0.4s;
+
+  visibility: hidden;
+  opacity: 0;
+}
+@media (max-width: 1024px){ 
+	.bUaVHd {
+    	padding-left: 20%; padding-right: 20%;
+	}
+	.gNwgdH{
+		width : 100%;
+		height : 100%;
+	}
+}
+@media (max-width: 768px){ /* 768 이하일때 적용 */
+	.bUaVHd {
+    	padding-left: 0%; padding-right: 0%;
+	}
+	.gNwgdH{
+		width : 100%;
+		height : 100%;
+	}
+}
+
+/* 팝업창 뒤에 검은 화면*/
+.overlay-modal2 {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.8;
+}
+
+.show-modal2 {
+  visibility: visible;
+  opacity: 1;
+}
 /*//////////////////////////////////////////////////////////////////
 [ Table Shopping Cart ]*/
 
@@ -2336,6 +2395,34 @@ input.num-product::-webkit-inner-spin-button {
   text-transform: uppercase;
 }
 
+.starR1 {
+	background:
+		url('http://miuu227.godohosting.com/images/icon/ico_review.png')
+		no-repeat -52px 0;
+	background-size: auto 100%;
+	width: 15px;
+	height: 30px;
+	float: left;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+.starR2 {
+	background:
+		url('http://miuu227.godohosting.com/images/icon/ico_review.png')
+		no-repeat right 0;
+	background-size: auto 100%;
+	width: 15px;
+	height: 30px;
+	float: left;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+.starR1.on {
+	background-position: 0 0;
+}
+.starR2.on {
+	background-position: -15px 0;
+}
 
 /*//////////////////////////////////////////////////////////////////
 [ L-Text >= 26 ]*/
@@ -3330,3 +3417,6 @@ input.num-product::-webkit-inner-spin-button {
   }
 
 }
+
+
+
