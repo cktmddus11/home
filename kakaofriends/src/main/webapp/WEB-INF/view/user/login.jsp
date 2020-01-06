@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>    
+    pageEncoding="UTF-8"%>  
+<%@ include file="/WEB-INF/view/jspHeader.jsp" %>     
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,8 @@
 	    	</tr>
 	    	<tr>
 	    		<td>성별</td>
-	    		<td>${sessionScope.kgender}</td>
+	    		<td>${sessionScope.kgender eq 'male'?'남자':'여자'}
+	    		</td>
 	    	</tr>
 	    	<tr>
 	    		<td>생일</td>

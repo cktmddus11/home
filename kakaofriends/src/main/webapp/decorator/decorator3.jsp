@@ -4,6 +4,7 @@
 	uri="http://www.opensymphony.com/sitemesh/decorator"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <c:set var="path" value="${pageContext.request.contextPath}" />
+<c:set var="url" value="${pageContext.request.requestURL}" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,11 +38,9 @@
 <link rel="stylesheet" type="text/css"
 	href="../vendor/perfect-scrollbar/perfect-scrollbar.css">
 <!--===============================================================================================-->
-<link rel="stylesheet" type="text/css" href="../css/util.css">
-<link rel="stylesheet" type="text/css" href="../css/main.css">
-<!--===============================================================================================-->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
 <!-- ... -->
 <link rel="stylesheet" type="text/css"
 	href="../vendor/select2/select2.min.css">
@@ -50,7 +49,7 @@
 	href="../vendor/daterangepicker/daterangepicker.css">
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="../vendor/slick/slick.css">
-<!--===============================================================================================-->
+<!--=============================================================================== ================-->
 <link rel="stylesheet" type="text/css"
 	href="../vendor/MagnificPopup/magnific-popup.css">
 <!--===============================================================================================-->
@@ -59,43 +58,92 @@
 <!--===============================================================================================-->
 <link rel="stylesheet" type="text/css" href="../css/util.css">
 <link rel="stylesheet" type="text/css" href="../css/main.css">
+<link rel="stylesheet" type="text/css" href="../css/main_cyj.css">
 <!--===============================================================================================-->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+<link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans">
+<link rel="shortcut icon" href="//t1.kakaocdn.net/kakaofriends_global/static/img/favicon.ico" type="image/x-ico">
+<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,200,300,900&display=swap" rel="stylesheet">
 <!-- ... -->
 </head>
+<style>
+#boldfont_white {
+	font-family: 'Noto Sans KR', sans-serif;	
+	font-weight: 900;	
+	color: white; 
+	width: 100%;
+	font-size: 25px;
+}
+#boldfont_black_de {
+	font-family: 'Noto Sans KR', sans-serif;	
+	font-weight: 900;	
+	color: black; 
+	width: 100%;
+	font-size: 25px;
+}
+#lightfont_white {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 100;	
+	color: white;
+	width: 100%;
+	font-size: 18px;
+}
+#lightfont_black_de {
+	font-family: 'Noto Sans KR', sans-serif;
+	font-weight: 100;	
+	color: black;
+	width: 100%;
+	font-size: 18px;
+}
+a.noul:hover {
+	text-decoration: none;
+	color: #b2b2b2;
+}
+
+</style>
 </head>
 <decorator:head />
 </head>
 <body class="animsition">
 
 	<!-- Header -->
+	<c:if test="${url == 'http://localhost:8080/kakaofriends/info/storeInfo.store' }">
 	<header>
 		<!-- Header desktop -->
-		<div class="container-menu-desktop">
+		<div class="container-menu-desktop" >
 			<!-- Topbar -->
 
 
-			<div class="wrap-menu-desktop" style="position: absolute">
-				<nav class="limiter-menu-desktop container">
+			<div class="wrap-menu-desktop" >
+				<nav class="limiter-menu-desktop container" >
 
 					<!-- Logo desktop -->
-					<a href="../index.store" class="logo"> <img
-						src="../images/icons/KAKAOFRIENDS_img_logo_560X5602.png"
-						alt="IMG-LOGO">
-					</a>
+				<div style="width: 75%;">
+					<div style="width: 210px;">
+						<a href="../index.store" class="logo" id="boldfont_white" > 
+							KAKAO FRIENDS
+						</a>
+					</div>
+				</div>
+				
 
 					<!-- Menu desktop -->
-					<div class="menu-desktop">
-						<ul class="main-menu">
-							
-
-							<li><a href="product.html">매장안내</a></li>
-
-							<li class="label1" data-label1="hot"><a
-								href="shoping-cart.html">캐릭터 소개</a></li>
-
-
+					<div class="menu-desktop" style="width: 25%; ">
+						<ul class="main-menu" >
+							<li><a href="characterInfo.store" id="lightfont_white" 
+							<c:if test="${url == 'http://localhost:8080/kakaofriends/info/characterInfo.store' }">
+							style="text-decoration: underline;"</c:if>
+							>캐릭터 소개</a></li>
+							<!-- 							
+								<li class="label1" data-label1="hot"><a
+								href="shoping-cart.html" id="lightfont_white" >매장 안내</a></li>
+								 -->
+							<li style="margin-left: 46px;"><a
+								href="storeInfo.store" id="lightfont_white" 
+							<c:if test="${url == 'http://localhost:8080/kakaofriends/info/storeInfo.store' }">
+							style="text-decoration: underline;"</c:if>
+								>매장 안내</a></li>
 						</ul>
 					</div>
 
@@ -103,86 +151,130 @@
 
 				</nav>
 			</div>
-		</div>
-
-		<!-- Header Mobile -->
-		<div class="wrap-header-mobile">
+			</div>
+			<!-- Header Mobile -->
+		<div class="wrap-header-mobile" style="position: absolute;"> 
 			<!-- Logo moblie -->
-			<div class="logo-mobile">
-				<a href="index.html"><img src="images/icons/logo-01.png"
-					alt="IMG-LOGO"></a>
+			<div style="width: 95%;">
+				<div style="width: 210px;">
+					<a href="../index.store" class="logo" id="boldfont_white" > 
+							KAKAO FRIENDS
+						</a>
+				</div>
 			</div>
-
+						
 			<!-- Icon header -->
-			<div class="wrap-icon-header flex-w flex-r-m m-r-15">
-				<div
-					class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 js-show-modal-search">
-					<i class="zmdi zmdi-search"></i>
-				</div>
-
-				<div
-					class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"
-					data-notify="2">
-					<i class="zmdi zmdi-shopping-cart"></i>
-				</div>
-
-				<a href="#"
-					class="dis-block icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti"
-					data-notify="0"> <i class="zmdi zmdi-favorite-outline"></i>
-				</a>
-			</div>
 
 			<!-- Button show menu -->
+			<div style="width: 5%;">
 			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-				<span class="hamburger-box"> <span class="hamburger-inner"></span>
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
 				</span>
+			</div>
 			</div>
 		</div>
 
+		
 
 		<!-- Menu Mobile -->
-		<div class="menu-mobile">
-			<ul class="topbar-mobile">
-				<li>
-					<div class="left-top-bar">Free shipping for standard order
-						over $100</div>
-				</li>
+		<div class="menu-mobile" style="z-index: 100; display: none; padding-top: 64px; position: absolute;">
+			<div class="main-menu-m" style="padding-left: 15px;"> 
+				<div><a href="characterInfo.store" id="lightfont_white" 
+				<c:if test="${url == 'http://localhost:8080/kakaofriends/info/characterInfo.store' }">style="text-decoration: underline;"</c:if>
+				>캐릭터 소개</a></div>
+				<br>
+				<div><a href="storeInfo.store" id="lightfont_white" 
+				<c:if test="${url == 'http://localhost:8080/kakaofriends/info/storeInfo.store' }">style="text-decoration: underline;"</c:if>
+				>매장 안내</a></div>
+			</div>
+		</div>
+	</header>
+	</c:if>
+	<c:if test="${url == 'http://localhost:8080/kakaofriends/info/characterInfo.store' }">
+	<header>
+		<!-- Header desktop -->
+		<div class="container-menu-desktop" >
+			<!-- Topbar -->
 
-				<li>
-					<div class="right-top-bar flex-w h-full">
-						<a href="#" class="flex-c-m p-lr-10 trans-04"> Help & FAQs </a> <a
-							href="#" class="flex-c-m p-lr-10 trans-04"> My Account </a> <a
-							href="#" class="flex-c-m p-lr-10 trans-04"> EN </a> <a href="#"
-							class="flex-c-m p-lr-10 trans-04"> USD </a>
+
+			<div class="wrap-menu-desktop" >
+				<nav class="limiter-menu-desktop container">
+
+					<!-- Logo desktop -->
+				<div style="width: 75%;">
+					<div style="width: 210px;">
+						<a href="../index.store" class="logo" id="boldfont_black_de" > 
+							KAKAO FRIENDS
+						</a>
 					</div>
-				</li>
-			</ul>
+				</div>
+				
 
-			<ul class="main-menu-m">
-				<li><a href="index.html">Home</a>
-					<ul class="sub-menu-m">
-						<li><a href="index.html">Homepage 1</a></li>
-						<li><a href="home-02.html">Homepage 2</a></li>
-						<li><a href="home-03.html">Homepage 3</a></li>
-					</ul> <span class="arrow-main-menu-m"> <i
-						class="fa fa-angle-right" aria-hidden="true"></i>
-				</span></li>
+					<!-- Menu desktop -->
+					<div class="menu-desktop" style="width: 25%; ">
+						<ul class="main-menu" >
+							<li><a href="characterInfo.store" id="lightfont_black_de" 
+							<c:if test="${url == 'http://localhost:8080/kakaofriends/info/characterInfo.store' }">
+							style="text-decoration: underline;"</c:if>
+							>캐릭터 소개</a></li>
+							<!-- 							
+								<li class="label1" data-label1="hot"><a
+								href="shoping-cart.html" id="lightfont_white" >매장 안내</a></li>
+								 -->
+							<li style="margin-left: 46px;"><a
+								href="storeInfo.store" id="lightfont_black_de" 
+							<c:if test="${url == 'http://localhost:8080/kakaofriends/info/storeInfo.store' }">
+							style="text-decoration: underline;"</c:if>
+								>매장 안내</a></li>
+						</ul>
+					</div>
 
-				<li><a href="product.html">Shop</a></li>
+					<!-- Icon header -->
 
-				<li><a href="shoping-cart.html" class="label1 rs1"
-					data-label1="hot">Features</a></li>
+				</nav>
+			</div>
+			</div>
+			<!-- Header Mobile -->
+		<div class="wrap-header-mobile" style="position: absolute;"> 
+			<!-- Logo moblie -->
+			<div style="width: 95%; float: left;">
+				<div style="width: 210px;">
+					<a href="../index.store" class="logo" id="boldfont_black_de" > 
+							KAKAO FRIENDS
+						</a>
+				</div>
+			</div>
+						
+			<!-- Icon header -->
 
-				<li><a href="blog.html">Blog</a></li>
+			<!-- Button show menu -->
+			<div style="width: 10%; float: right;">
+			<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+				<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+				</span>
+			</div>
+			</div>
+		</div>
 
-				<li><a href="about.html">About</a></li>
+		
 
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
+		<!-- Menu Mobile -->
+		<div class="menu-mobile" style="z-index: 100; display: none; padding-top: 64px; position: absolute;">
+			<div class="main-menu-m" style="padding-left: 15px;"> 
+				<div><a href="characterInfo.store" id="lightfont_black_de" 
+				<c:if test="${url == 'http://localhost:8080/kakaofriends/info/characterInfo.store' }">style="text-decoration: underline;"</c:if>
+				>캐릭터 소개</a></div>
+				<br>
+				<div><a href="storeInfo.store" id="lightfont_black_de" 
+				<c:if test="${url == 'http://localhost:8080/kakaofriends/info/storeInfo.store' }">style="text-decoration: underline;"</c:if>
+				>매장 안내</a></div>
+			</div>
 		</div>
 
 		<!-- Modal Search -->
-		<div
+		<!-- <div
 			class="modal-search-header flex-c-m trans-04 js-hide-modal-search">
 			<div class="container-search-header">
 				<button
@@ -198,11 +290,11 @@
 						placeholder="Search...">
 				</form>
 			</div>
-		</div>
+		</div> -->
 	</header>
-
+	</c:if>
 	<!-- Cart -->
-	<div class="wrap-header-cart js-panel-cart">
+	<!-- <div class="wrap-header-cart js-panel-cart">
 		<div class="s-full js-hide-cart"></div>
 
 		<div class="header-cart flex-col-l p-l-65 p-r-25">
@@ -267,16 +359,17 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 
 
 	<!-- Slider -->
-	<section class="section-slide">
+	<c:if test="${url == 'http://localhost:8080/kakaofriends/info/storeInfo.store' }">
+	<section class="section-slide" style="position: relative;">
 		<div class="wrap-slick1">
 			<div class="slick1">
 				<div class="item-slick1"
-					style="background-image: url(https://t1.kakaocdn.net/friends/prod/info/bg_storeInfo_01_M.jpg);">
+					style="background-image: url('../images/storeinfo_sildeimg/bg_storeInfo_01_W_180219.jpg'); ">
 					<!-- <div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false"
@@ -302,7 +395,7 @@
 				</div>
 
 				<div class="item-slick1"
-					style="background-image: url(https://t1.kakaocdn.net/friends/prod/info/bg_storeInfo_02_M.jpg);">
+					style="background-image: url('../images/storeinfo_sildeimg/bg_storeInfo_02_W.jpg');">
 					<!-- <div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false"
@@ -327,7 +420,7 @@
 				</div>
 
 				<div class="item-slick1"
-					style="background-image: url(https://t1.kakaocdn.net/friends/prod/info/bg_storeInfo_03_M.jpg);">
+					style="background-image: url('../images/storeinfo_sildeimg/bg_storeInfo_03_W.jpg');">
 					<!-- <div class="container h-full">
 						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
 							<div class="layer-slick1 animated visible-false"
@@ -351,9 +444,27 @@
 						</div>
 					</div> -->
 				</div>
+				<div class="item-slick1"
+					style="background-image: url('../images/storeinfo_sildeimg/bg_storeInfo_04_W.jpg'); ">
+				</div>
+				<div class="item-slick1"
+					style="background-image: url('../images/storeinfo_sildeimg/bg_storeInfo_05_W.jpg'); ">
+				</div>
 			</div>
 		</div>
 	</section>
+	</c:if>
+	<c:if test="${url == 'http://localhost:8080/kakaofriends/info/characterInfo.store' }">
+	<section class="section-slide" style="position: relative;">
+		<div class="wrap-slick1" >
+		<div class="slick1">
+			<div class="item-slick1"
+					style="background-image: url('../images/characterinfo_sildeimg/bg_charInfo_kr_W.png'); ">
+			</div>
+		</div>
+		</div>
+	</section>
+	</c:if>
 
 
 	<!-- Banner -->
@@ -361,29 +472,59 @@
 
 
 	<!-- Product -->
-	<section class="bg0 p-t-23 p-b-140">
-		<div class="container">
+	<section style="margin-bottom: 10px; margin-top: 180px;">
+		<div class="container" >
 		<decorator:body />
 		</div>
+		<div class="container" >
+		<c:if test="${url == 'http://localhost:8080/kakaofriends/info/characterInfo.store' }">
+		<a href="http://localhost:8080/kakaofriends/info/storeInfo.store">
+		<img class="mo" src="../images/characterinfo_footer/banner_storeInfo_kr_W.png" height="100%" width="100%">
+		<img class="mo2" src="../images/characterinfo_footer/banner_storeInfo_kr_M.png" height="100%" width="100%">
+		</a>
+		</c:if>
+		<c:if test="${url == 'http://localhost:8080/kakaofriends/info/storeInfo.store' }">
+		<a href="http://localhost:8080/kakaofriends/info/characterInfo.store">
+		<img class="mo" src="../images/storeinfo_footer/banner_charInfo_kr_W.png" height="100%" width="100%">
+		</a>
+		</c:if>
+		</div>
 	</section>
-
+	<style type="text/css">
+	@media (max-width: 856px){
+	img.mo {
+		display: none;
+	}
+	}
+	@media (max-width: 856px){
+	img.mo2 {
+			display: block;
+	}
+	}
+	@media (min-width: 856px){
+	img.mo2 {
+		display: none;
+	}
+	}
+	</style>
 
 	<!-- Footer -->
 	<footer class="bg3 p-t-75 p-b-32">
-		<div class="container">
+		<div class="container"> 
+				<a href="#" style="font-size: 18px; text-decoration: none; " class="stext-107 cl7 noul">개인정보처리방침 </a>&nbsp;&nbsp;&nbsp;
+				<a href="#" style="font-size: 18px; text-decoration: none; " class="stext-107 cl7 noul">이용약관 </a>&nbsp;&nbsp;&nbsp;
+				<a href="#" style="font-size: 18px; text-decoration: none; " class="stext-107 cl7 noul">제휴문의 </a>
+				<br><br><br>
 			<div class="row">
-				
-
 				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">GET IN TOUCH</h4>
-
-					<p class="stext-107 cl7 size-201">카카오아이엑스 사업자등록번호 : 354-86-00070<br>
-통신판매업 신고번호 : 2017-서울강남-02573<br>
-대표이사 : 권승조<br>
-주소 : 서울특별시 강남구 테헤란로 521 파르나스타워, 27층<br>
-고객센터 : 1577-6263 / 평일 10시 ~ 18시
-
-
+					<p class="stext-107 cl7 size-700">
+					카카오아이엑스 사업자등록번호 : 354-86-00070<br>
+					통신판매업 신고번호 : 2017-서울강남-02573<br>
+					대표이사 : 권승조<br>
+					주소 : 서울특별시 강남구 테헤란로 521 파르나스타워, 27층<br>
+					고객센터 : 1577-6263 / 평일 10시 ~ 18시<br>
+					<br>
+					Copyright © KAKAO IX CORP.
 				<!-- 	<div class="p-t-27">
 						<a href="#" class="fs-18 cl7 hov-cl1 trans-04 m-r-16"> <i
 							class="fa fa-facebook"></i>
@@ -394,44 +535,7 @@
 						</a>
 					</div> -->
 				</div>
-
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">
-								Questions</h4>
-
-					<form>
-						<div class="wrap-input1 w-full p-b-4">
-							<input class="input1 bg-none plh1 stext-107 cl7" type="text"
-								name="email" placeholder="store@kakaofriends.com">
-							<div class="focus-input1 trans-04"></div>
-						</div>
-
-						<div class="p-t-18">
-							<button
-								class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-								Subscribe</button>
-						</div>
-					</form>
-					
-				</div>
-				<div class="col-sm-6 col-lg-3 p-b-50">
-					<h4 class="stext-301 cl0 p-b-30">Global Questions</h4>
-
-				<form>
-						<div class="wrap-input1 w-full p-b-4">
-							<input class="input1 bg-none plh1 stext-107 cl7" type="text"
-								name="email" placeholder="global@kakaofriends.com">
-							<div class="focus-input1 trans-04"></div>
-						</div>
-
-						<div class="p-t-18">
-							<button
-								class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
-								Subscribe</button>
-						</div>
-					</form>
-					
-				</div>
+			</div>
 			</div>
 
 			<!-- <div class="p-t-40">
@@ -447,21 +551,20 @@
 					</a> <a href="#" class="m-all-1"> <img
 						src="images/icons/icon-pay-05.png" alt="ICON-PAY">
 					</a>
-				</div> -->
+				</div> 
 
 				<p class="stext-107 cl6 txt-center">
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					Copyright &copy;
 					<script>document.write(new Date().getFullYear());</script>
 					All rights reserved | Made with <i class="fa fa-heart-o"
 						aria-hidden="true"></i> by <a href="https://colorlib.com"
 						target="_blank">Colorlib</a> &amp; distributed by <a
 						href="https://themewagon.com" target="_blank">ThemeWagon</a>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 
 				</p>
 			</div>
 		</div>
+		-->
 	</footer>
 
 
@@ -472,7 +575,8 @@
 		</span>
 	</div>
 
-	<!-- Modal1 -->
+	<!-- Modal1
+	<!--
 	<div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
 		<div class="overlay-modal1 js-hide-modal1"></div>
 
@@ -543,8 +647,8 @@
 							<p class="stext-102 cl3 p-t-23">Nulla eget sem vitae eros
 								pharetra viverra. Nam vitae luctus ligula. Mauris consequat
 								ornare feugiat.</p>
-
-							<!--  -->
+								
+						
 							<div class="p-t-33">
 								<div class="flex-w flex-r-m p-b-10">
 									<div class="size-203 flex-c-m respon6">Size</div>
@@ -604,7 +708,7 @@
 								</div>
 							</div>
 
-							<!--  -->
+							
 							<div class="flex-w flex-m p-l-100 p-t-40 respon7">
 								<div class="flex-m bor9 p-r-10 m-r-11">
 									<a href="#"
@@ -631,7 +735,7 @@
 			</div>
 		</div>
 	</div>
-
+ -->
 	<!--===============================================================================================-->
 	<script src="../vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->
@@ -732,6 +836,8 @@
 		});
 	</script>
 	<!--===============================================================================================-->
-
+	<script src="../js/main.js"></script>
+	
+	
 </body>
 </html>

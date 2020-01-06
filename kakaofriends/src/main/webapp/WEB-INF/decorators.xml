@@ -9,7 +9,7 @@
  	</decorator>
  	<!--  매장소개 -->
  	<decorator name="main3" page="decorator3.jsp">
- 		<pattern>/info/storeinf*</pattern>
+ 		<pattern>/info/*</pattern>
  	</decorator>
  
  	<!-- layout 제외 -->

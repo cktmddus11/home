@@ -65,8 +65,7 @@
 		<!-- Header desktop -->
 		<div class="container-menu-desktop">
 			<!-- Topbar -->
-			<div class="wrap-menu-desktop"
-				style="border-bottom: 1px solid rgb(227, 229, 232);">
+			<div class="wrap-menu-desktop">
 				<div class="limiter-menu-desktop container">
 					<!-- Menu desktop -->
 					<div class="menu-desktop" style="width: 30%;">
@@ -115,7 +114,7 @@
 				</div>
 			
 				<div class="limiter-menu-desktop container"
-					style="margin: auto; background-color: white; border-top: 1px solid rgb(237, 237, 237);">
+					style="margin: auto; background-color: white;">
 					<!-- tab header -->
 					<div class="" style="margin: auto;">
 						<br>
