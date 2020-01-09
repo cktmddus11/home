@@ -15,12 +15,16 @@
 	    		<td>${sessionScope.kemail}</td>
 	    	</tr>
 	    	<tr>
-	    		<td>이름</td>
+	    		<td>닉네임(카톡에서는 이름)</td>
 	    		<td>${sessionScope.kname}</td>
 	    	</tr>
 	    	<tr>
-	    		<td>이미지</td>
-	    		<td>${sessionScope.kimage}</td>
+	    		<td>썸네일</td>
+	    		<td><img src="${sessionScope.kimage1}"></td>
+	    	</tr>
+	    	<tr>
+	    		<td>큰이미지</td>
+	    		<td><img src="${sessionScope.kimage2}"></td>
 	    	</tr>
 	    	<tr>
 	    		<td>성별</td>
@@ -39,7 +43,7 @@
 	    </table>
 	  <h1>로그아웃 </h1> 
 	  <a href="logout.store">로그아웃</a>
-	  
+	  <a href="updateForm.store">정보 수정</a>
 	  
 	  
 	  
