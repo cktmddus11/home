@@ -1,8 +1,8 @@
 package day4;
-/* ¿À¹ö¶óÀÌµåÀÇ È®Àå : ¹ÝÈ¯°ªÀÇ ÇüÀÌ ¿ÏÀüÈ÷ ÀÏÄ¡ ÇÏÁö ¾Ê´õ¶óµµ 
- * ¿À¹ö¶óÀÌµù ÇÒ ¼ö ÀÖÀ½
+/* ì˜¤ë²„ë¼ì´ë“œì˜ í™•ìž¥ : ë°˜í™˜ê°’ì˜ í˜•ì´ ì™„ì „ížˆ ì¼ì¹˜ í•˜ì§€ ì•Šë”ë¼ë„ 
+ * ì˜¤ë²„ë¼ì´ë”© í•  ìˆ˜ ìžˆìŒ
  * 
- * - ´Ü, ¹ÝÈ¯°ªÀÇ ÇüÀº »ó¼ÓÇÑ ¸Þ¼­µåÀÇ ¹ÝÈ¯°ªÀÇ ÇüÀÇ ¼­ºêÅ¬·¡½º¿©¾ß ÇÔ
+ * - ë‹¨, ë°˜í™˜ê°’ì˜ í˜•ì€ ìƒì†í•œ ë©”ì„œë“œì˜ ë°˜í™˜ê°’ì˜ í˜•ì˜ ì„œë¸Œí´ëž˜ìŠ¤ì—¬ì•¼ í•¨
  * 
  * */
 class Superz{
@@ -14,10 +14,10 @@ class SubX extends Superz{
 	@Override
 	String getName() {
 		return new String("SubX");
-	}//¿À¹ö¶óÀÌµùÇÑ ¼­ºê Å¬·¡½ºÀÇ ¹ÝÈ¯ÇüÀº String
-	// ºÎ¸ðÅ¬·¡½ºÀÇ ¹ÝÈ¯ÇüÀº Object·Î 
-	// String Àº ObjectÀÇ ¼­ºê Å¬·¡½ºÀÌ¹Ç·Î ¹ÝÈ¯ÇüÀÌ ´Ù¸£°Ô 
-	// ¿À¹ö¶óÀÌµå °¡´ÉÇÏ´Ù
+	}//ì˜¤ë²„ë¼ì´ë”©í•œ ì„œë¸Œ í´ëž˜ìŠ¤ì˜ ë°˜í™˜í˜•ì€ String
+	// ë¶€ëª¨í´ëž˜ìŠ¤ì˜ ë°˜í™˜í˜•ì€ Objectë¡œ 
+	// String ì€ Objectì˜ ì„œë¸Œ í´ëž˜ìŠ¤ì´ë¯€ë¡œ ë°˜í™˜í˜•ì´ ë‹¤ë¥´ê²Œ 
+	// ì˜¤ë²„ë¼ì´ë“œ ê°€ëŠ¥í•˜ë‹¤
 }
 
 public class OverrideEx2 {
@@ -29,4 +29,3 @@ public class OverrideEx2 {
 	}
 
 }
-

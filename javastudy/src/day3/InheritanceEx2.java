@@ -1,7 +1,7 @@
 package day3;
-/* »ó¼ÓÀÇ Á¤ÀÇ
+/* ìƒì†ì˜ ì •ì˜
  * 
- * ¼­ºêÅ¬·¡½º¸¦ Á¤ÀÇÇÏ´Â ¹æ¹ý - extends
+ * ì„œë¸Œí´ëž˜ìŠ¤ë¥¼ ì •ì˜í•˜ëŠ” ë°©ë²• - extends
  */
 class Animal {
 	String name;
@@ -21,9 +21,9 @@ public class InheritanceEx2 {
 		//cat.age;
 		//cat.name;
 		//cat.print();
-		//=======À§ ºÎ¸ð²¨ === ¾Æ·¡ º»ÀÎ(¼­ºêÅ¬·¡½º) ¸â¹ö
+		//=======ìœ„ ë¶€ëª¨êº¼ === ì•„ëž˜ ë³¸ì¸(ì„œë¸Œí´ëž˜ìŠ¤) ë©¤ë²„
 		//cat.birth;
-		// *** ¼­ºêÅ¬·¡½ºÀÇ ¿ÀºêÁ§Æ®´Â ½´ÆÛÅ¬·¡½ºÀÇ ¸â¹ö¸¦ ÀÌ¿ëÇÒ ¼ö ÀÖÀ½
+		// *** ì„œë¸Œí´ëž˜ìŠ¤ì˜ ì˜¤ë¸Œì íŠ¸ëŠ” ìŠˆí¼í´ëž˜ìŠ¤ì˜ ë©¤ë²„ë¥¼ ì´ìš©í•  ìˆ˜ ìžˆìŒ
 		
 
 	}

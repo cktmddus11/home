@@ -12,29 +12,29 @@ class Person{
 }
 class Girl extends Person{
 	void print() {
-		System.out.println(getName()+"¾ç");
+		System.out.println(getName()+"ì–‘");
 	}
 	
-	// 1¹ø ex)
+	// 1ë²ˆ ex)
 	/*void print() {
-		System.out.println(name+"¾ç");
-		// nameÇÊµå´Â ºÎ¸ğÅ¬·¡½º¿¡¼­ »ó¼ÓÀÌ °¡´ÉÇÑ ¸â¹öÀÌÁö¸¸ private ·Î Á¦ÇÑµÇ¾îÀÖ±â ‹š¹®¿¡
-		// ¼­ºê Å¬·¡½º·Î »ó¼ÓÀÌ ºÒ°¡´ÉÇÏ´Ù!!!
+		System.out.println(name+"ì–‘");
+		// nameí•„ë“œëŠ” ë¶€ëª¨í´ë˜ìŠ¤ì—ì„œ ìƒì†ì´ ê°€ëŠ¥í•œ ë©¤ë²„ì´ì§€ë§Œ private ë¡œ ì œí•œë˜ì–´ìˆê¸° Â‹Âšë¬¸ì—
+		// ì„œë¸Œ í´ë˜ìŠ¤ë¡œ ìƒì†ì´ ë¶ˆê°€ëŠ¥í•˜ë‹¤!!!
 	}*/
 }
-//** private ¸â¹ö´Â 1. ¼­ºêÅ¬·¡½º·Î °è½ÂµÇ°Å³ª 2. ´Ù¸¥ ¿ÀºêÁ§Æ®¿¡¼­ ÀÌ¿ëÇÒ ¼ö¾øÀ½
+//** private ë©¤ë²„ëŠ” 1. ì„œë¸Œí´ë˜ìŠ¤ë¡œ ê³„ìŠ¹ë˜ê±°ë‚˜ 2. ë‹¤ë¥¸ ì˜¤ë¸Œì íŠ¸ì—ì„œ ì´ìš©í•  ìˆ˜ì—†ìŒ
 
 public class TestPerson {
 	public static void main(String[] args) {
 		Girl nara = new Girl();
-		nara.setName("³ª¶ó");
+		nara.setName("ë‚˜ë¼");
 		nara.print();
 		
-		// 2¹ø ex)
+		// 2ë²ˆ ex)
 		Person p = new Person();
-		//p.name = "³ª¶ó"; ´Ù¸¥ ¿ÀºêÁ§Æ®¿¡¼­ ÀÌ¿ëÇÒ ¼ö¾øÀ½
-		p.setName("½Â¿¬");
-		// p.print(); ºÎ¸ğ´Â ÀÚ½ÄÀÇ ¸â¹ö¸¦ ÀÌ¿ëÇÒ ¼ö¾øÀ½
+		//p.name = "ë‚˜ë¼"; ë‹¤ë¥¸ ì˜¤ë¸Œì íŠ¸ì—ì„œ ì´ìš©í•  ìˆ˜ì—†ìŒ
+		p.setName("ìŠ¹ì—°");
+		// p.print(); ë¶€ëª¨ëŠ” ìì‹ì˜ ë©¤ë²„ë¥¼ ì´ìš©í•  ìˆ˜ì—†ìŒ
 		System.out.println(p.getName());
 	}
 }

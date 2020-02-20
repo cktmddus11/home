@@ -1,16 +1,16 @@
 package day3;
 /* 
- * »ý¼ºÀÚ : ¿ÀºêÁ§Æ® »ý¼º°ú ÇÔ²² ÀÚµ¿ÀûÀ¸·Î È£ÃâµÇ´Â Æ¯¼öÇÑ ¸Þ¼Òµå
+ * ìƒì„±ìž : ì˜¤ë¸Œì íŠ¸ ìƒì„±ê³¼ í•¨ê»˜ ìžë™ì ìœ¼ë¡œ í˜¸ì¶œë˜ëŠ” íŠ¹ìˆ˜í•œ ë©”ì†Œë“œ
  * 
  * */
 class A1{
 	int a, b, c;
-	// ¾Æ·¡ ±âº»ÀûÀÎ »ý¼ºÀÚ´Â ÀÚµ¿À¸·Î »ý¼ºÇØÁÖ±â ¶§¹®¿¡ ¾È½áµµµÊ
-	A1(){ // »ý¼ºÀÚ´Â Å¬·¡½º¸í°ú µ¿ÀÏÇÑ ÀÌ¸§À» ¾²°í
+	// ì•„ëž˜ ê¸°ë³¸ì ì¸ ìƒì„±ìžëŠ” ìžë™ìœ¼ë¡œ ìƒì„±í•´ì£¼ê¸° ë•Œë¬¸ì— ì•ˆì¨ë„ë¨
+	A1(){ // ìƒì„±ìžëŠ” í´ëž˜ìŠ¤ëª…ê³¼ ë™ì¼í•œ ì´ë¦„ì„ ì“°ê³ 
 		a = 0;
 		b = 0;
 		c = 0;
-		// ¹ÝÈ¯°ªÀÌ ¾ø´Ù
+		// ë°˜í™˜ê°’ì´ ì—†ë‹¤
 	}
 	@Override
 	public String toString() {
@@ -23,7 +23,7 @@ public class Constructor {
 
 	public static void main(String[] args) {
 	
-		A1 a = new A1(); // ¿ÀºêÁ§Æ® »ý¼º = »ý¼ºÀÚÀÇ È£Ãâ
+		A1 a = new A1(); // ì˜¤ë¸Œì íŠ¸ ìƒì„± = ìƒì„±ìžì˜ í˜¸ì¶œ
 		System.out.println(a);
 	}
 

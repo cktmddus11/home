@@ -1,5 +1,5 @@
 package day4;
-// ¿À¹ö¶óÀÌµåÀÇ È®Á¤
+// ì˜¤ë²„ë¼ì´ë“œì˜ í™•ì •
 class SuperZ{
 	Number num() {
 		return null;
@@ -8,7 +8,7 @@ class SuperZ{
 class SubX2 extends SuperZ{
 	Double num() {
 		return new Double(10);
-	}//¹İÈ¯°ªÀÇ ÇüÀº »ó¼ÓÇÑ ¸Ş¼ÒµåÀÇ ¹İÈ¯°ªÀÇ ÇüÀÌ ¼­ºêÅ©·¡½º ÀÌ¾î¾ßÇÔ
+	}//ë°˜í™˜ê°’ì˜ í˜•ì€ ìƒì†í•œ ë©”ì†Œë“œì˜ ë°˜í™˜ê°’ì˜ í˜•ì´ ì„œë¸Œí¬ë˜ìŠ¤ ì´ì–´ì•¼í•¨
 }
 
 public class OverRideSample {

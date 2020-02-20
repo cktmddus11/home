@@ -1,10 +1,10 @@
 package day4;
 /* 
- * ¿À¹ö¶óÀÌµùÀÌ¶õ ?
- * - ½´ÆÛ Äð·¡½ºÀÇ ¸Þ¼Òµå´Â ¼­ºêÅ¬·¡½º¿¡¼­ ´Ù½Ã Á¤ÀÇÇÒ ¼ö ÀÖÀ½
+ * ì˜¤ë²„ë¼ì´ë”©ì´ëž€ ?
+ * - ìŠˆí¼ ì¿¨ëž˜ìŠ¤ì˜ ë©”ì†Œë“œëŠ” ì„œë¸Œí´ëž˜ìŠ¤ì—ì„œ ë‹¤ì‹œ ì •ì˜í•  ìˆ˜ ìžˆìŒ
  * 
- * ** »ó¼ÓµÈ ¸Þ¼­µå¿Í µ¿ÀÏÇÑ ÀÌ¸§, µ¿ÀÏÇÑ ÀÎ¼ö¸¦ °¡Áö´Â ¸Þ¼Òµå¸¦ Á¤ÀÇÇÏ¿©
- * ¸Þ¼Òµå¸¦ µ¤¾î ¾²´Â °Í
+ * ** ìƒì†ëœ ë©”ì„œë“œì™€ ë™ì¼í•œ ì´ë¦„, ë™ì¼í•œ ì¸ìˆ˜ë¥¼ ê°€ì§€ëŠ” ë©”ì†Œë“œë¥¼ ì •ì˜í•˜ì—¬
+ * ë©”ì†Œë“œë¥¼ ë®ì–´ ì“°ëŠ” ê²ƒ
  * 
  * */
 
@@ -15,11 +15,11 @@ class Greeting{
 }
 class Insa extends Greeting{
 	void bye() {
-		System.out.println("¿À¹ö¶óÀÌµù µÈ ¸Þ¼­µå");
+		System.out.println("ì˜¤ë²„ë¼ì´ë”© ëœ ë©”ì„œë“œ");
 	}
 	void byeEnglish() {
-		super.bye(); // superÀ» ÀÌ¿ëÇØ¼­ ¼­ºêÅ¬·¡½º¾È¿¡¼­
-		// ½´ÆÛÅ¬·¡½ºÀÇ ÇÊµå¿Í ¸Þ¼Òµå¸¦ ÂüÁ¶ÇÒ ¼ö ÀÖÀ½
+		super.bye(); // superì„ ì´ìš©í•´ì„œ ì„œë¸Œí´ëž˜ìŠ¤ì•ˆì—ì„œ
+		// ìŠˆí¼í´ëž˜ìŠ¤ì˜ í•„ë“œì™€ ë©”ì†Œë“œë¥¼ ì°¸ì¡°í•  ìˆ˜ ìžˆìŒ
 	}
 }
 
@@ -31,12 +31,12 @@ public class OverridingEx1 {
 		
 		
 		Insa insa  = new Insa();
-		insa.bye(); // ¿À¹ö¶óÀÌµù µÈ ¸Þ¼­µå°¡ È£ÃâµÊ
+		insa.bye(); // ì˜¤ë²„ë¼ì´ë”© ëœ ë©”ì„œë“œê°€ í˜¸ì¶œë¨
 
-		/* ¿À¹ö¸®¾Æµù¿¡¼­´Â ¸Þ¼ÒµåÀÇ ¼ö½ÄÀÚ¸¦ º¯°æÇÒ ¼ö ÀÖÀ½
-		 * ´Ü Á¦ÇÑÀÌ ¾àÇÑ°ÍÀ» °­ÇÏ°Ô´ÂÇÒ ¼ö ¾øÀ½?
+		/* ì˜¤ë²„ë¦¬ì•„ë”©ì—ì„œëŠ” ë©”ì†Œë“œì˜ ìˆ˜ì‹ìžë¥¼ ë³€ê²½í•  ìˆ˜ ìžˆìŒ
+		 * ë‹¨ ì œí•œì´ ì•½í•œê²ƒì„ ê°•í•˜ê²ŒëŠ”í•  ìˆ˜ ì—†ìŒ?
 		 * public protected default private
-		 * ¾à                                                  °­*/
+		 * ì•½                                                  ê°•*/
 		insa.byeEnglish();
 		
 	}

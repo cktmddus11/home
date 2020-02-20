@@ -8,9 +8,9 @@ public class Roopex {
 				// 2 - 0 <= 0 false
 				// 2 - 1 <= 0 false
 				// 2 - 2 <= 0 true
-				break; // ¹Ýº¹À» Áß´ÜÈÄ
+				break; // ë°˜ë³µì„ ì¤‘ë‹¨í›„
 			}
 			System.out.println(b + "-"+a+"="+(b-a));
-		} // ÀÌ°÷À¸·Î µ¹¾Æ¿È
+		} // ì´ê³³ìœ¼ë¡œ ëŒì•„ì˜´
 	}
 }

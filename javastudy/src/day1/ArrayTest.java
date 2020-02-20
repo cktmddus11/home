@@ -2,12 +2,12 @@ package day1;
 
 public class ArrayTest {
 	public static void main(String[] args) {
-		int []a = new int[4]; // ¹è¿­ ¼±¾ğ
-		//               4 ¿ä¼Ò ¼ö
-		int []b = new int[] {1,2, 3, 4}; // ¹è¿­ ¼±¾ğ°ú µ¿½Ã¿¡ ÃÊ±âÈ­
+		int []a = new int[4]; // ë°°ì—´ ì„ ì–¸
+		//               4 ìš”ì†Œ ìˆ˜
+		int []b = new int[] {1,2, 3, 4}; // ë°°ì—´ ì„ ì–¸ê³¼ ë™ì‹œì— ì´ˆê¸°í™”
 		int []c = {1, 2, 3,4};
 		
-		// ´ÙÂ÷¿ø ¹è¿­ 
+		// ë‹¤ì°¨ì› ë°°ì—´ 
 		int [][] d = {
 				{10, 20, 30}, 
 				{40, 50},

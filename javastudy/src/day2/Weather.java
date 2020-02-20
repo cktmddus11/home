@@ -1,20 +1,20 @@
 package day2;
 
 class Wdata{
-	int month; // ÇÊµå Á¤ÀÇ
+	int month; // í•„ë“œ ì •ì˜
 	int day;
 	String sky;
 }
 
 public class Weather {
 	public static void main(String[] args) {
-		Wdata today = new Wdata(); // ¿ÀºêÁ§Æ® »ı¼º
-		// ÀÎ½ºÅÏ½º È­
+		Wdata today = new Wdata(); // ì˜¤ë¸Œì íŠ¸ ìƒì„±
+		// ì¸ìŠ¤í„´ìŠ¤ í™”
 		
 		today.month = 10;
 		today.day = 5;
-		today.sky = "¸¼À½";
-		System.out.println(today.month+"¿ù"+
-		today.day+"ÀÏ"+today.sky);
+		today.sky = "ë§‘ìŒ";
+		System.out.println(today.month+"ì›”"+
+		today.day+"ì¼"+today.sky);
 	}
 }

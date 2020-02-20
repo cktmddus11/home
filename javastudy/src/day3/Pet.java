@@ -11,14 +11,14 @@ class Cat{
 		age = a;
 	}
 	void print() {
-		System.out.println(place +":"+name+","+age+"»ì");
+		System.out.println(place +":"+name+","+age+"ì‚´");
 	}
 	void print(String p, int a) {
 		place = p;
-		System.out.println(place +": °í¾çÀÌ´Â "+a+"¸¶¸®ÀÔ´Ï´Ù."+name);
+		System.out.println(place +": ê³ ì–‘ì´ëŠ” "+a+"ë§ˆë¦¬ì…ë‹ˆë‹¤."+name);
 	}
 	void print(String variety) {
-		System.out.println(place +":"+name+" "+age+"»ì"+variety);
+		System.out.println(place +":"+name+" "+age+"ì‚´"+variety);
 	}
 }
 
@@ -28,11 +28,11 @@ public class Pet {
 		Cat cat2 = new Cat();
 		Cat cat3 = new Cat();
 		
-		cat1.setData("·Îºó",  "¿ì¸®Áı", 10);
-		cat2.setData("¾ÆÀÌ", "¿·Áı", 14);
-		cat1.print("ÀâÁ¾");
+		cat1.setData("ë¡œë¹ˆ",  "ìš°ë¦¬ì§‘", 10);
+		cat2.setData("ì•„ì´", "ì˜†ì§‘", 14);
+		cat1.print("ì¡ì¢…");
 		cat2.print();
-		cat3.print("¿ì¸®Áı", 0);
+		cat3.print("ìš°ë¦¬ì§‘", 0);
 		
 	}
 }

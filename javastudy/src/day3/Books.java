@@ -1,5 +1,5 @@
 package day3;
-// ÀÎ¼ö°¡ ÀÖ´Â »ı¼ºÀÚ
+// ì¸ìˆ˜ê°€ ìˆëŠ” ìƒì„±ì
 class Book{
 	int price;
 	int num = 0;
@@ -13,10 +13,10 @@ class Book{
 		title = t;
 	}
 	void print() {
-		System.out.println("Á¦ ¸ñ : "+title);
-		System.out.println("°¡ °İ : "+price);
-		System.out.println("ÁÖ¹® ¼ö·® : "+num);
-		System.out.println("ÇÕ°è ±İ¾× :"+price * num);
+		System.out.println("ì œ ëª© : "+title);
+		System.out.println("ê°€ ê²© : "+price);
+		System.out.println("ì£¼ë¬¸ ìˆ˜ëŸ‰ : "+num);
+		System.out.println("í•©ê³„ ê¸ˆì•¡ :"+price * num);
 	}
 }
 
@@ -24,11 +24,11 @@ class Book{
 public class Books {
 
 	public static void main(String[] args) {
-		Book book = new Book("C°¡ º¸ÀÌ´Â ±×¸²Ã¥ ", 12000);
+		Book book = new Book("Cê°€ ë³´ì´ëŠ” ê·¸ë¦¼ì±… ", 12000);
 		book.num = 10;
 		book.print();
 		
-		Book book1 = new Book("»ı¼ºÀÚ¿¡ ÀÎ¼ö°¡ ÇÑ°³¹Û¿¡ ¾ø´Â°Å");
+		Book book1 = new Book("ìƒì„±ìì— ì¸ìˆ˜ê°€ í•œê°œë°–ì— ì—†ëŠ”ê±°");
 		book1.print();
 		
 	}

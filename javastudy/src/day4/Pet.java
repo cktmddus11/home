@@ -1,7 +1,7 @@
 package day4;
 /* 
- * super : ¼­ºêÅ¬·¡½º¾È¿¡¼­ super¶ó´Â ¸»À» »ç¿ëÇÏ¸é
- * ½´ÆÛÅ¬·¡½ºÀÇ ÇÊµå¿Í ¸Ş¼­µå¸¦ ÂüÁ¶ÇÒ ¼ö ÀÖÀ½
+ * super : ì„œë¸Œí´ë˜ìŠ¤ì•ˆì—ì„œ superë¼ëŠ” ë§ì„ ì‚¬ìš©í•˜ë©´
+ * ìŠˆí¼í´ë˜ìŠ¤ì˜ í•„ë“œì™€ ë©”ì„œë“œë¥¼ ì°¸ì¡°í•  ìˆ˜ ìˆìŒ
  * 
  * */
 class Animal{
@@ -9,19 +9,19 @@ class Animal{
 	int age;
 	
 	void printPet() {
-		System.out.println("ÀÌ¸§ : "+name);
-		System.out.println("³ªÀÌ : "+age);
+		System.out.println("ì´ë¦„ : "+name);
+		System.out.println("ë‚˜ì´ : "+age);
 	}
 }
 class Cat extends Animal{
 	String variety;
 	
-	// »ó¼Ó¹ŞÀº ¸Ş¼­µå¸¦ ¿À¹ö¶óÀÌµù
+	// ìƒì†ë°›ì€ ë©”ì„œë“œë¥¼ ì˜¤ë²„ë¼ì´ë”©
 	@Override
 	void printPet() {
-		super.printPet(); // superÀ» »ç¿ëÇÏ¿© ºÎ¸ğÅ¬·¡½ºÀÇ 
-		// ¸â¹ö¸¦(¸Ş¼Òµå¸¦) ÂüÁ¶
-		System.out.println("Á¾·ù : "+variety);
+		super.printPet(); // superì„ ì‚¬ìš©í•˜ì—¬ ë¶€ëª¨í´ë˜ìŠ¤ì˜ 
+		// ë©¤ë²„ë¥¼(ë©”ì†Œë“œë¥¼) ì°¸ì¡°
+		System.out.println("ì¢…ë¥˜ : "+variety);
 		
 	}
 }
@@ -29,9 +29,9 @@ public class Pet {
 
 	public static void main(String[] args) {
 		Cat cat = new Cat();
-		cat.name = "¾ç¼øÀÌ";
+		cat.name = "ì–‘ìˆœì´";
 		cat.age=5;
-		cat.variety = "Æä¸£½Ã¾È";
+		cat.variety = "í˜ë¥´ì‹œì•ˆ";
 		cat.printPet();
 
 	}

@@ -1,10 +1,10 @@
 package day3;
 
-// °¡º¯ ±æÀÌ ÀÎ¼ö
+// ê°€ë³€ ê¸¸ì´ ì¸ìˆ˜
 public class VarargsSample {
 	
-	int getMax(int ...nums) { // °¡º¯ ±æÀÌ ÀÎ¼ö¿Í ÀÎ¼öÀÇ °¹¼ö°¡ Á¤ÇØÁø ¸Ş¼Òµå·Î ¿À¹ö·Îµå ÇÏ´Â ¸Ş¼Òµå °¡ ÀÖÀ¸¸é
-		//°¹¼ö°¡ Á¤ÇØÁø ¸Ş¼Òµå¸¦ ¿ì¼±À¸·Î È£ÃâÇÔ 
+	int getMax(int ...nums) { // ê°€ë³€ ê¸¸ì´ ì¸ìˆ˜ì™€ ì¸ìˆ˜ì˜ ê°¯ìˆ˜ê°€ ì •í•´ì§„ ë©”ì†Œë“œë¡œ ì˜¤ë²„ë¡œë“œ í•˜ëŠ” ë©”ì†Œë“œ ê°€ ìˆìœ¼ë©´
+		//ê°¯ìˆ˜ê°€ ì •í•´ì§„ ë©”ì†Œë“œë¥¼ ìš°ì„ ìœ¼ë¡œ í˜¸ì¶œí•¨ 
 		int max = 0;
 		for(int i = 0;i<nums.length;i++) {
 			if(i == 0) {
@@ -19,8 +19,8 @@ public class VarargsSample {
 	
 	public static void main(String[] args) {
 		VarargsSample vt = new VarargsSample();
-		System.out.println("(2, 3,4,5, 4) ÃÖ´ë°ª : "+vt.getMax(2, 3,4, 5, 4));
-		System.out.println("(2, 3) ÃÖ´ë°ª : "+vt.getMax(2, 3));
+		System.out.println("(2, 3,4,5, 4) ìµœëŒ€ê°’ : "+vt.getMax(2, 3,4, 5, 4));
+		System.out.println("(2, 3) ìµœëŒ€ê°’ : "+vt.getMax(2, 3));
 		
 	} 
 }

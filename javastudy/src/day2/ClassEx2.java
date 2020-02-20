@@ -1,6 +1,6 @@
 package day2;
-// Å¬·¡½º Á¤ÀÇ¿Í ¿ÀºêÁ§Æ® »ı¼º
-class Student { // Å¬·¡½º Á¤ÀÇ
+// í´ë˜ìŠ¤ ì •ì˜ì™€ ì˜¤ë¸Œì íŠ¸ ìƒì„±
+class Student { // í´ë˜ìŠ¤ ì •ì˜
 	int [] point = new int[3];
 	String name;
 	
@@ -13,11 +13,10 @@ public class ClassEx2 {
 
 	public static void main(String[] args) {
 		Student kim = new Student();
-		// StudentÅ¬·¡½ºÀÇ kim ¿ÀºêÁ§Æ® »ı¼º
+		// Studentí´ë˜ìŠ¤ì˜ kim ì˜¤ë¸Œì íŠ¸ ìƒì„±
 		Student lee = new Student();
-		// StudentÅ¬·¡½ºÀÇ lee ¿ÀºêÁ§Æ® »ı¼º
+		// Studentí´ë˜ìŠ¤ì˜ lee ì˜¤ë¸Œì íŠ¸ ìƒì„±
 
 	}
 
 }
-

@@ -3,23 +3,23 @@ package day2;
 public class Prime {
 
 	public static void main(String[] args) {
-		int max = 100; // ¼Ò¼ö¸¦ Ã£À» ¹üÀ§
-		boolean[] a = new boolean[max]; // ¼Ò¼öÀÎÁö ¾Æ´ÑÁö ÆÇº°
+		int max = 100; // ì†Œìˆ˜ë¥¼ ì°¾ì„ ë²”ìœ„
+		boolean[] a = new boolean[max]; // ì†Œìˆ˜ì¸ì§€ ì•„ë‹Œì§€ íŒë³„
 		
-		// ¹è¿­ÀÇ ÃÊ±âÈ­
+		// ë°°ì—´ì˜ ì´ˆê¸°í™”
 		for(int i = 0;i<max;i++) {
 			a[i] = true;
 		}
 		
-		// ¼Ò¼öÀÎ°¡ ¾Æ´Ñ°¡ ÆÇ´Ü
+		// ì†Œìˆ˜ì¸ê°€ ì•„ë‹Œê°€ íŒë‹¨
 		for(int i = 2;i<max;i++) {
 			if(a[i -1]) { 
 				for(int j = 2;i * j<= max;j++) {
-					a[i * j -1] = false; // ¹è¼öÀÎ°Å falseÃ³¸®
+					a[i * j -1] = false; // ë°°ìˆ˜ì¸ê±° falseì²˜ë¦¬
 				}
 			}
 		}
-		// °á°ú¸¦ Ç¥½ÃÇÏ±â
+		// ê²°ê³¼ë¥¼ í‘œì‹œí•˜ê¸°
 		for(int i = 1;i<max;i++) {
 			if(a[i]) 
 				System.out.print((i + 1)+" ");

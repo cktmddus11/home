@@ -1,6 +1,6 @@
 package day2;
-// 1 ºÎÅÍ 10 ±îÁö Â¦¼ö¿Í È¦¼öÀÇ ÇÕÀ» for¹®°ú 
-// if¹®À» »ç¿ëÇÏ¿© Ãâ·ÂÇÏ´Â ÇÁ·Î±×·¥ ÀÛ¼º
+// 1 ë¶€í„° 10 ê¹Œì§€ ì§ìˆ˜ì™€ í™€ìˆ˜ì˜ í•©ì„ forë¬¸ê³¼ 
+// ifë¬¸ì„ ì‚¬ìš©í•˜ì—¬ ì¶œë ¥í•˜ëŠ” í”„ë¡œê·¸ë¨ ì‘ì„±
 public class Test1 {
 	public static void main(String[] args) {
 		int sum = 0, sum2 = 0;
@@ -12,8 +12,8 @@ public class Test1 {
 			}
 		}
 		
-		System.out.println("Â¦¼ö ÇÕ :"+sum+"\n"
-				+"È¦¼ö ÇÕ :"+sum2);
+		System.out.println("ì§ìˆ˜ í•© :"+sum+"\n"
+				+"í™€ìˆ˜ í•© :"+sum2);
 		
 	}
 }

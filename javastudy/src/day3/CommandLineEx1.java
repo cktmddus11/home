@@ -3,11 +3,11 @@ package day3;
 public class CommandLineEx1 {
 
 	public static void main(String[] args) {
-		//             main ¸Ş¼­µåÀÇ ÀÎ¼ö´Â String Å¬·¡½ºÀÇ ¹è¿­·Î µÇ¾îÀÖÀ½
+		//             main ë©”ì„œë“œì˜ ì¸ìˆ˜ëŠ” String í´ë˜ìŠ¤ì˜ ë°°ì—´ë¡œ ë˜ì–´ìˆìŒ
 		int i;
 		
-		if(args.length==0) { // ÀÎ¼ö¸¦ ÁÖÁö ¾Ê¾ÒÀ» ¶§
-			System.out.println("Ä¿¸Çµå ¶óÀÎ ÀÎ¼ö°¡ ¾ø½À´Ï´Ù.");
+		if(args.length==0) { // ì¸ìˆ˜ë¥¼ ì£¼ì§€ ì•Šì•˜ì„ ë•Œ
+			System.out.println("ì»¤ë§¨ë“œ ë¼ì¸ ì¸ìˆ˜ê°€ ì—†ìŠµë‹ˆë‹¤.");
 		}else {
 			for(i = 0;i<args.length;i++) {
 				System.out.println((i+1)+":"+args[i]); // orange grape apple

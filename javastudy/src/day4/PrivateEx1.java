@@ -1,10 +1,10 @@
 package day4;
 /* 
- * private Á¢±Ù Á¦ÇÑÀÚ
- * ÇÊµå¿Í ¸Þ¼Òµå´Â ´Ù¸¥ ¿ÀºêÁ§Æ®·Î ºÎÅÍ ¼û±æ ¼ö ÀÖÀ½.
+ * private ì ‘ê·¼ ì œí•œìž
+ * í•„ë“œì™€ ë©”ì†Œë“œëŠ” ë‹¤ë¥¸ ì˜¤ë¸Œì íŠ¸ë¡œ ë¶€í„° ìˆ¨ê¸¸ ìˆ˜ ìžˆìŒ.
  * 
- * Á¢±ÙÁ¦ÇÑÀÚ¸¦ ÀÌ¿ëÇØ¼­ Å¬·¡½º¿Í ±× ¸â¹öÀÇ ¼ºÁúÀ» ÁöÁ¤ÇÒ ¼ö ÀÖÀ½
- * ** privateÀ» ºÙÀÎ ¸â¹ö´Â ´Ù¸¥ ¿ÀºêÁ§Æ®¿¡¼­ ÀÌ¿ëÇÒ ¼ö ¾ø°Ô µÊ
+ * ì ‘ê·¼ì œí•œìžë¥¼ ì´ìš©í•´ì„œ í´ëž˜ìŠ¤ì™€ ê·¸ ë©¤ë²„ì˜ ì„±ì§ˆì„ ì§€ì •í•  ìˆ˜ ìžˆìŒ
+ * ** privateì„ ë¶™ì¸ ë©¤ë²„ëŠ” ë‹¤ë¥¸ ì˜¤ë¸Œì íŠ¸ì—ì„œ ì´ìš©í•  ìˆ˜ ì—†ê²Œ ë¨
  * */
 class X{
 	private int a;
@@ -16,11 +16,11 @@ class X{
 class Y{
 	void print() {
 		X x = new X();
-		System.out.println(x.getA()); // ÀÌ ¸Þ¼­µå´Â private °¡ ¾Æ´Ï±â ¶§¹®¿¡ ÀÌ¿ë °¡´É
-		// µû¶ó¼­ ¸Þ¼­µå¸¦ ÀÌ¿ëÇØ¼­ ¾È¿¡ ÀÖ´Â a ¸â¹ö¸¦ ÀÌ¿ë°¡´É -> 0Ãâ·ÂµÊ
+		System.out.println(x.getA()); // ì´ ë©”ì„œë“œëŠ” private ê°€ ì•„ë‹ˆê¸° ë•Œë¬¸ì— ì´ìš© ê°€ëŠ¥
+		// ë”°ë¼ì„œ ë©”ì„œë“œë¥¼ ì´ìš©í•´ì„œ ì•ˆì— ìžˆëŠ” a ë©¤ë²„ë¥¼ ì´ìš©ê°€ëŠ¥ -> 0ì¶œë ¥ë¨
 		
-		//x.a = 4; aÇÊµå´Â private·Î ÁöÁ¤µÈ ¸â¹öÀÌ±â ¶§¹®¿¡ ´Ù¸¥ ¿ÀºêÁ§Æ®¿¡¼­ 
-		// ÀÌ¿ë ÇÒ ¼ö ¾øÀ½
+		//x.a = 4; aí•„ë“œëŠ” privateë¡œ ì§€ì •ëœ ë©¤ë²„ì´ê¸° ë•Œë¬¸ì— ë‹¤ë¥¸ ì˜¤ë¸Œì íŠ¸ì—ì„œ 
+		// ì´ìš© í•  ìˆ˜ ì—†ìŒ
 	}
 }
 
@@ -33,4 +33,3 @@ public class PrivateEx1 {
 	}
 
 }
-

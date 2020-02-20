@@ -7,7 +7,7 @@ import java.util.List;
 public class ForLoopTest {
 	public static void main(String[] args) {
 		int []a = {1, 2, 3, 4};
-		for(int b : a) { // b¿¡ aÀÇ ¿ä¼Ò Â÷·Ê´ë·Î ÇÑ°³¾¿ ´ëÀÔ
+		for(int b : a) { // bì— aì˜ ìš”ì†Œ ì°¨ë¡€ëŒ€ë¡œ í•œê°œì”© ëŒ€ì…
 			System.out.println(b);
 		}
 		

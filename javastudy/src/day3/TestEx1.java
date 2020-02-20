@@ -6,10 +6,10 @@ class Study{
 		return false;
 	}
 	void method(int a, int b) {
-		System.out.println("¾È³ç");
+		System.out.println("ì•ˆë…•");
 	}
 	void method(long a) {
-		System.out.println("¾È³ç");
+		System.out.println("ì•ˆë…•");
 	}
 }
 
@@ -19,15 +19,15 @@ public class TestEx1 {
 		Study english = new Study();
 		Study java = new Study();
 		// Ex4
-		// *** ¿À¹ö·Îµù : ÀÌ¸§Àº °°Áö¸¸ ÀÎÀÚÀÇ Å¸ÀÔ°ú °³¼ö¿¡ ÀÇÇØ ±¸ºĞµÊ!!!
+		// *** ì˜¤ë²„ë¡œë”© : ì´ë¦„ì€ ê°™ì§€ë§Œ ì¸ìì˜ íƒ€ì…ê³¼ ê°œìˆ˜ì— ì˜í•´ êµ¬ë¶„ë¨!!!
 		// boolean method(int a)
 		// void method(int a)
-		// ÀÌ¸§ÀÌ µ¿ÀÏÇÏ°í ÀÎ¼öÀÇ °¹¼ö°¡ µ¿ÀÏÇÏ¹Ç·Î µ¿ÀÏÇÑ ¸Ş¼­µå·Î ÀÎ½ÄÇÔ
-		// µû¶ó¼­ Àß¸øµÊ
+		// ì´ë¦„ì´ ë™ì¼í•˜ê³  ì¸ìˆ˜ì˜ ê°¯ìˆ˜ê°€ ë™ì¼í•˜ë¯€ë¡œ ë™ì¼í•œ ë©”ì„œë“œë¡œ ì¸ì‹í•¨
+		// ë”°ë¼ì„œ ì˜ëª»ë¨
 		//System.out.println(english.method(345646787));
 		
 		if(args.length == 0|| args.length == 1) {
-			System.out.println("ÀÔ·ÂÇÏÁö ¾Ê¾Ò°Å³ª Àß¸øÀÔ·ÂÇÏ¼Ì½À´Ï´Ù");
+			System.out.println("ì…ë ¥í•˜ì§€ ì•Šì•˜ê±°ë‚˜ ì˜ëª»ì…ë ¥í•˜ì…¨ìŠµë‹ˆë‹¤");
 		}else {
 			for(int i = 0;i<args.length;i++) {
 				System.out.println("args["+i+"]="+args[i]);

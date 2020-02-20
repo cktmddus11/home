@@ -1,64 +1,64 @@
 package day3;
 /* 
- * ¼ºÀûÇ¥½Ã ÇÁ·Î±×·¥
- * - TestÅ¬·¡½º : ±³°ú¸í, Á¡¼ö
- * - Student Å¬·¡½º : ÇĞ»ı¹øÈ£, ÀÌ¸§, °ú¸ñ¼ö 
+ * ì„±ì í‘œì‹œ í”„ë¡œê·¸ë¨
+ * - Testí´ë˜ìŠ¤ : êµê³¼ëª…, ì ìˆ˜
+ * - Student í´ë˜ìŠ¤ : í•™ìƒë²ˆí˜¸, ì´ë¦„, ê³¼ëª©ìˆ˜ 
  * */
 class Test{
-	String subject; // ±³°ú¸í
-	int point; // Á¡¼ö
+	String subject; // êµê³¼ëª…
+	int point; // ì ìˆ˜
 	
-	void setPoint(String s, int p) { // Á¡¼ö¸¦ ¼³Á¤ÇÏ´Â ¸Ş¼Òµå
+	void setPoint(String s, int p) { // ì ìˆ˜ë¥¼ ì„¤ì •í•˜ëŠ” ë©”ì†Œë“œ
 		subject = s;
 		point = p;
 	}
-	String getPoint() { // ÇÑ °ú¸ñÀÇ Á¡¼ö¸¦ °¡Á®¿À´Â ¸Ş¼Òµå
+	String getPoint() { // í•œ ê³¼ëª©ì˜ ì ìˆ˜ë¥¼ ê°€ì ¸ì˜¤ëŠ” ë©”ì†Œë“œ
 		return subject +":"+point;
 	}
 }
 class Student{
-	int id; // ÇĞ»ı¹øÈ£
-	String name; // ÀÌ¸§
-	int subnum; // °ú¸ñ¼ö
-	Test[] test; // Å×½ºÆ® Å¬·¡½ºÀÇ ¿ÀºêÁ§Æ® ¹è¿­
+	int id; // í•™ìƒë²ˆí˜¸
+	String name; // ì´ë¦„
+	int subnum; // ê³¼ëª©ìˆ˜
+	Test[] test; // í…ŒìŠ¤íŠ¸ í´ë˜ìŠ¤ì˜ ì˜¤ë¸Œì íŠ¸ ë°°ì—´
 	
-	Student(int i, String n, int s){ // »ı¼ºÀÚ
+	Student(int i, String n, int s){ // ìƒì„±ì
 		id = i;
 		name = n;
 		subnum = s;
 		test = new Test[s];
 		for(int j = 0;j<s;j++) {
-			test[j] = new Test(); // ¹è¿­ÀÇ ¿ä¼Ò ÇÏ³ªÇÏ³ª¿¡ ´ëÇØ
-			// 						new ¿¡¼­ ¿ÀºêÁ§Æ®¸¦ »ı¼º
+			test[j] = new Test(); // ë°°ì—´ì˜ ìš”ì†Œ í•˜ë‚˜í•˜ë‚˜ì— ëŒ€í•´
+			// 						new ì—ì„œ ì˜¤ë¸Œì íŠ¸ë¥¼ ìƒì„±
 		}
 		
 	}
-	String getName() { // ÀÌ¸§À» °¡Á®¿À´Â ¸Ş¼­µå
+	String getName() { // ì´ë¦„ì„ ê°€ì ¸ì˜¤ëŠ” ë©”ì„œë“œ
 		return id +":"+name;
 	}
-	int getGrade() { // ÃÑÁ¡À» °¡Á®¿À´Â ¸Ş¼­µå
+	int getGrade() { // ì´ì ì„ ê°€ì ¸ì˜¤ëŠ” ë©”ì„œë“œ
 		int sum = 0;
 		for(int i = 0;i<subnum;i++) {
 			sum += test[i].point;
 		}
 		return sum;
 	}
-	// ¸Ş¼­µåÀÇ ¿À¹ö·Îµå
-	int getGrade(int a) { // ¼ºÀûÀ» Æò°¡ÇÏ´Â ¸Ş¼­µå
+	// ë©”ì„œë“œì˜ ì˜¤ë²„ë¡œë“œ
+	int getGrade(int a) { // ì„±ì ì„ í‰ê°€í•˜ëŠ” ë©”ì„œë“œ
 		int base = 100 * subnum /a; // 100 * 3 / 5 = 300 / 5 = 60
 		int rank = getGrade() / base + 1; // (80 + 60 + 50) / 60 + 1
 		return (rank > a)?a:rank; // 3 > 5? 5 : (3)
 		
 	}
 	void printScore() {
-		System.out.println(getName()); // ¼ºÀûÀ» Ç¥½ÃÇÏ´Â ¸Ş¼Òµå
+		System.out.println(getName()); // ì„±ì ì„ í‘œì‹œí•˜ëŠ” ë©”ì†Œë“œ
 		for(int i = 0;i<subnum;i++) {
 			System.out.print(test[i].getPoint()); 
 		}
 		System.out.println();
-		System.out.println("ÃÑÁ¡ : "+getGrade());
+		System.out.println("ì´ì  : "+getGrade());
 		int rank = 5;
-		System.out.println(rank +"´Ü°è Æò°¡ "+getGrade(rank));
+		System.out.println(rank +"ë‹¨ê³„ í‰ê°€ "+getGrade(rank));
 		System.out.println();
 	}
 }
@@ -66,16 +66,16 @@ class Student{
 public class Classroom {
 
 	public static void main(String[] args) {
-		Student kim = new Student(12, "±èÁÖÇö", 3);
-		kim.test[0].setPoint("±¹¾î", 95);
-		kim.test[1].setPoint("¿µ¾î",  83);
-		kim.test[2].setPoint("¼öÇĞ", 76);
+		Student kim = new Student(12, "ê¹€ì£¼í˜„", 3);
+		kim.test[0].setPoint("êµ­ì–´", 95);
+		kim.test[1].setPoint("ì˜ì–´",  83);
+		kim.test[2].setPoint("ìˆ˜í•™", 76);
 		kim.printScore();
 
-		Student lee = new Student(7, "ÀÌ Áø", 3);
-		lee.test[0].setPoint("±¹¾î", 66);
-		lee.test[1].setPoint("¿µ¾î",  97);
-		lee.test[2].setPoint("¼öÇĞ", 72);
+		Student lee = new Student(7, "ì´ ì§„", 3);
+		lee.test[0].setPoint("êµ­ì–´", 66);
+		lee.test[1].setPoint("ì˜ì–´",  97);
+		lee.test[2].setPoint("ìˆ˜í•™", 72);
 		lee.printScore();
 
 		

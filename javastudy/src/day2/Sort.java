@@ -4,21 +4,21 @@ public class Sort {
 
 	public static void main(String[] args) {
 		int a[] = {210, 19, 72, 129, 34};
-		int b = a.length; // 5 ¹è¿­ aÀÇ ¿ä¼Ò ¼ö
+		int b = a.length; // 5 ë°°ì—´ aì˜ ìš”ì†Œ ìˆ˜
 		int i, j, k;
 		
 		
-		System.out.println("µ¥ÀÌÅÍ Ç¥½Ã");
+		System.out.println("ë°ì´í„° í‘œì‹œ");
 		for(i = 0;i<b;i++) {
 			System.out.print(a[i]+" ");
 		}System.out.println();
 		
 		
-		// ¹öºíÁ¤·Ä - ¿À¸§Â÷¼ø Á¤·Ä
-		// ºñ±³±âÁØ Á¤ÇÏ±â
-		for(j = 0;j<b-1;j++) { // ¿ä¼Ò¼ö - 1 ¹ø ¹İº¹ 
-			// 5 - 1 = 4¹ø, 0 1 2 3 
-			for(i = j+1;i<b;i++) { // ºñ±³ ´ë»ó Á¤ÇÏ±â 
+		// ë²„ë¸”ì •ë ¬ - ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
+		// ë¹„êµê¸°ì¤€ ì •í•˜ê¸°
+		for(j = 0;j<b-1;j++) { // ìš”ì†Œìˆ˜ - 1 ë²ˆ ë°˜ë³µ 
+			// 5 - 1 = 4ë²ˆ, 0 1 2 3 
+			for(i = j+1;i<b;i++) { // ë¹„êµ ëŒ€ìƒ ì •í•˜ê¸° 
 				// 1, 1 < 5, (1 2 3 4)
 				if(a[j] > a[i]) {
 					k = a[j];
@@ -27,7 +27,7 @@ public class Sort {
 				}
 			}
 		}
-		System.out.println("Á¤·Ä ÈÄ");
+		System.out.println("ì •ë ¬ í›„");
 		for(i = 0;i<b;i++) {
 			System.out.print(a[i]+" ");
 		}System.out.println();

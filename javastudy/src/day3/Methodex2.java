@@ -1,5 +1,5 @@
 package day3;
-// ¸Ş¼Òµå È£ÃâÇÏ±â - ´Ù¸¥ ¿ÀºêÁ§Æ®ÀÇ ¸Ş¼Òµå¸¦ È£ÃâÇÏ°í ½ÇÇàÇÏ´Â ¹æ¹ı
+// ë©”ì†Œë“œ í˜¸ì¶œí•˜ê¸° - ë‹¤ë¥¸ ì˜¤ë¸Œì íŠ¸ì˜ ë©”ì†Œë“œë¥¼ í˜¸ì¶œí•˜ê³  ì‹¤í–‰í•˜ëŠ” ë°©ë²•
 
 class Calc1{
 	int add(int a, int b) {
@@ -8,7 +8,7 @@ class Calc1{
 }
 
 public class Methodex2 {
-	static void disp() { // static ºÙ¾î¾ßÇÔ - mainÀÌ static¸Ş¼­µåÀÌ±â¶§¹®¿¡
+	static void disp() { // static ë¶™ì–´ì•¼í•¨ - mainì´ staticë©”ì„œë“œì´ê¸°ë•Œë¬¸ì—
 		int c;
 		Calc1 calc = new Calc1();
 		c = calc.add(8, 9);
@@ -18,7 +18,7 @@ public class Methodex2 {
 	public static void main(String[] args) {
 		Calc1 calc = new Calc1();
 		System.out.println("3 + 9 = "+calc.add(3,  6));
-		                   ///          ´Ù¸¥ ¿ÀºêÁ§Æ®¸¦ È£ÃâÇÏ±â À§ÇØ¼­ calc(ÇÇ¸®¾îµå)»ç¿ë
+		                   ///          ë‹¤ë¥¸ ì˜¤ë¸Œì íŠ¸ë¥¼ í˜¸ì¶œí•˜ê¸° ìœ„í•´ì„œ calc(í”¼ë¦¬ì–´ë“œ)ì‚¬ìš©
 		
 		disp(); 
 		

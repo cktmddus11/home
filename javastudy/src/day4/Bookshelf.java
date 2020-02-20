@@ -1,22 +1,22 @@
 package day4;
-// »ó¼ÓÀÇ Á¤ÀÇ
-// ¼­ºêÅ¬·¡½º¸¦ Á¤ÀÇÇÏ´Â ¹æ¹ı 
+// ìƒì†ì˜ ì •ì˜
+// ì„œë¸Œí´ë˜ìŠ¤ë¥¼ ì •ì˜í•˜ëŠ” ë°©ë²• 
 
 class Book{
-	String title; // Á¦¸ñ
-	String genre; // Àå¸£
+	String title; // ì œëª©
+	String genre; // ì¥ë¥´
 	
 	void printBook() {
-		System.out.println("Á¦¸ñ : "+title);
-		System.out.println("Àå¸£ : "+genre);
+		System.out.println("ì œëª© : "+title);
+		System.out.println("ì¥ë¥´ : "+genre);
 	}
 }
 class Novel extends Book{
-	String writer; // ÀÛ°¡
+	String writer; // ì‘ê°€
 	
 	void printNov() {
 		printBook();
-		System.out.println("ÀúÀÚ :"+writer);
+		System.out.println("ì €ì :"+writer);
 	}
 }
 class Magazine extends Book{
@@ -24,7 +24,7 @@ class Magazine extends Book{
 	
 	void printMsg() {
 		printBook();
-		System.out.println("¹ß¸ÅÀÏ :"+day+"ÀÏ");
+		System.out.println("ë°œë§¤ì¼ :"+day+"ì¼");
 	}
 }
 
@@ -32,13 +32,13 @@ class Magazine extends Book{
 public class Bookshelf {
 	public static void main(String[] args) {
 		Novel nov = new Novel();
-		nov.title = "±¸¿î¸ù";
-		nov.genre="°íÀü¹®ÇĞ";
-		nov.writer="±è¸¸Áß";
+		nov.title = "êµ¬ìš´ëª½";
+		nov.genre="ê³ ì „ë¬¸í•™";
+		nov.writer="ê¹€ë§Œì¤‘";
 		
 		Magazine mag = new Magazine();
-		mag.title = "¿ù°£ ÀÚ¹Ù ±×¸²Ã¥";
-		mag.genre="ÄÄÇ»ÅÍ";
+		mag.title = "ì›”ê°„ ìë°” ê·¸ë¦¼ì±…";
+		mag.genre="ì»´í“¨í„°";
 		mag.day = 20;
 		
 		
@@ -50,4 +50,3 @@ public class Bookshelf {
 		
 	}
 }
-

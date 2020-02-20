@@ -5,9 +5,9 @@ import java.util.StringTokenizer;
 public class StringTokenizerTest {
 	public static void main(String[] args) {
 		StringTokenizer v = new StringTokenizer("a b c"); 
-		String s = v.nextToken(); // ÅäÅ«À» ¼ø¼­´ë·Î Ãëµæ
+		String s = v.nextToken(); // í† í°ì„ ìˆœì„œëŒ€ë¡œ ì·¨ë“
 		
-		while(v.hasMoreTokens()) { // ÃëµæÇÏÁö ¾ÊÀº ÅäÅ«ÀÌ ÀÖ´Ù¸é true¸¦ ¹İÈ¯
+		while(v.hasMoreTokens()) { // ì·¨ë“í•˜ì§€ ì•Šì€ í† í°ì´ ìˆë‹¤ë©´ trueë¥¼ ë°˜í™˜
 			s = s + "+" + (v.nextToken());
 		}
 		System.out.println(s);
