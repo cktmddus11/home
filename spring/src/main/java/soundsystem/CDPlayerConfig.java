@@ -24,7 +24,7 @@ public class CDPlayerConfig {
 	@Bean
 	public CompactDisc sgtPeppers() {
 		return new SgtPeppers();
-	}
+	}//
 	
 	
 	
