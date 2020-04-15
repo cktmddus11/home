@@ -22,12 +22,16 @@ public class BlankDisc implements CompactDisc {
 		this.tracks = tracks;
 	}
 	
-	
+	// 모든 트랙 출력
 	public void play() {
 		System.out.println("Playing "+title+" by "+artist);
 		for(String track : tracks) {
 			System.out.println("-Track : "+track);
 		}
+	}
+	// 개별 트랙 출력
+	public void playTrack(int trackNumber) {
+		System.out.println(trackNumber+":"+tracks.get(trackNumber));
 	}
 
 }
