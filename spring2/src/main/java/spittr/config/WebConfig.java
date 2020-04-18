@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc // Spring MVC 활성화
-@ComponentScan("spitter.web") //component-scanning 활성화
+@ComponentScan("spittr.web") //component-scanning 활성화
 // 해당 패키지에 있는 @Controller 애노테이션이 붙은 컴포넌트를 찾음
 // => 내부에 명시적인 컨트롤러 선언을 할 필요 없음
 public class WebConfig extends WebMvcConfigurerAdapter{
@@ -20,7 +20,7 @@ public class WebConfig extends WebMvcConfigurerAdapter{
 	public ViewResolver viewResolver() {
 		InternalResourceViewResolver resolver = 
 				new InternalResourceViewResolver();
-		resolver.setPrefix("/WEB-INF/views"); // prefix : 접두사
+		resolver.setPrefix("/WEB-INF/views/"); // prefix : 접두사
 		resolver.setSuffix(".jsp"); // suffix : 접미사
 		resolver.setExposeContextBeansAsAttributes(true);
 		return resolver;
