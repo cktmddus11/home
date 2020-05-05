@@ -121,7 +121,7 @@ public class SpittleControllerTest {
 		System.out.println(saved);
 		System.out.println(unsaved);
 		verify(mockRepository, atLeastOnce()).save(refEq(unsaved)); // 저장 검증
-
+                                      // 123줄에서 에러나서 refEq처리
 		
 	}
 	
