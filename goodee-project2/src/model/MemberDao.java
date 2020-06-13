@@ -408,6 +408,7 @@ public class MemberDao {
 		}
 		return false;
 	}
+	// 이건어따 쓰는거임 ㅜㅜㅜ
 	public String selectsemester(String login) {
 		SqlSession session = DBConnection.getConnection();
 		try {

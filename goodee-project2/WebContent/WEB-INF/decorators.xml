@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="euc-kr" ?>
 <decorators defaultdir="/decorator">
  	<decorator name="main" page="decorator2.jsp">
+ 		<pattern>/main/*</pattern>
 		<pattern>/member/*</pattern>
 		<pattern>/board/*</pattern>
 	</decorator> 

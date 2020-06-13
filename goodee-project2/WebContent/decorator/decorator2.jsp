@@ -58,7 +58,7 @@ $(function(){
 
 	<nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-		<a class="navbar-brand mr-1" href="${path}/member/main.do">ANYTIME</a>
+		<a class="navbar-brand mr-1" href="${path}/main/main.do">ANYTIME</a>
 
 		<button class="btn btn-link btn-sm text-white order-1 order-sm-0"
 			id="sidebarToggle" href="#">
@@ -129,7 +129,7 @@ $(function(){
 				</div>
 			</div>
 			<li class="nav-item active"><a class="nav-link"
-				href="${path}/member/main.do"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>카테고리</span>
+				href="${path}/main/main.do"> <i class="fas fa-fw fa-tachometer-alt"></i> <span>카테고리</span>
 			</a></li>
 			<li class="nav-item dropdown"><a
 				class="nav-link dropdown-toggle" href="#" id="pagesDropdown"

@@ -1,4 +1,6 @@
 eclipse.preferences.version=1
 encoding//WebContent/member/JoinForm.jsp=EUC-KR
+encoding//src/action/board/BoardAllAction.java=EUC-KR
 encoding//src/action/member/MemberAllAction.java=EUC-KR
 encoding//src/model/Subject_info.java=EUC-KR
+encoding/<project>=EUC-KR

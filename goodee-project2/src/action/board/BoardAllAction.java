@@ -23,7 +23,7 @@ public class BoardAllAction {
 
 		if (login == null || login.trim().equals("")) { // 로그인 안돼있으면
 			request.setAttribute("msg", "로그인 후 거래하세요.");
-			request.setAttribute("url", "loginForm.do");
+			request.setAttribute("url", "../loginForm.do");
 			return false;
 			// MainAction 이 이 클래스 상속받아서 이클래스를 먼저 들려서
 			// 가기전에 여기서 걸려서 doExecute가 실행 안됨?
@@ -36,7 +36,7 @@ public class BoardAllAction {
 					return false;
 				} else {
 					request.setAttribute("msg", "본인만 가능합니다.");
-					request.setAttribute("url", "../member/main.do");
+					request.setAttribute("url", "../main/main.do");
 					return false;
 				}
 			}

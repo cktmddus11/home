@@ -16,6 +16,9 @@ import javax.servlet.http.HttpServletResponse;
 import com.oreilly.servlet.MultipartRequest;
 
 import action.ActionForward;
+import action.member.dto.response.BoardResponseDTO;
+import action.member.dto.response.EvalResponseDTO;
+import action.member.dto.response.SubjectResponseDTO;
 import model.Board;
 import model.GradeInfo;
 import model.Grade_statistics;
@@ -34,7 +37,7 @@ public class MemberAllAction {
 
 		if (login == null || login.trim().equals("")) { // 로그인 안돼있으면
 			request.setAttribute("msg", "로그인 후 거래하세요.");
-			request.setAttribute("url", "loginForm.do");
+			request.setAttribute("url", "../member/loginForm.do");
 			return false;
 			// MainAction 이 이 클래스 상속받아서 이클래스를 먼저 들려서
 			// 가기전에 여기서 걸려서 doExecute가 실행 안됨?
@@ -42,7 +45,7 @@ public class MemberAllAction {
 			if (!login.equals("admin") && id != null && !login.equals(id)) { // 로그인정보가 admin이 아니면서 로그인정보와 파라미터 정보가 일치하지
 																				// 않으면
 				request.setAttribute("msg", "본인만 가능합니다.");
-				request.setAttribute("url", "main.me");
+				request.setAttribute("url", "main/main.me");
 				return false;
 			}
 		}
@@ -64,7 +67,7 @@ public class MemberAllAction {
 			if (pass.equals(mem.getMem_password())) { // 입력한 비밀번호와 db비밀번호가같으면
 				request.getSession().setAttribute("login", id); // session은 자바의 내장객체가 아니고 jsp에 내장객체?
 				msg = mem.getMem_name() + "님이 로그인하셨습니다.";
-				url = "main.do";
+				url = "../main/main.do";
 			} else {// 입력한 비밀번호와 db비밀번호가 다르면
 				msg = "비밀번호가 틀립니다.";
 			}
@@ -128,37 +131,72 @@ public class MemberAllAction {
 	public ActionForward main(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, UnsupportedEncodingException {
 		if (checklogin(request, response)) { // main접근 전 로그인 검증
+			// decorator2.jsp에 메뉴바에 사용자 정보 나타내기 위함
 			String login = (String) request.getSession().getAttribute("login");
 			Member mem = new MemberDao().selectOne(login);
 			request.getSession().setAttribute("mem", mem);
-			System.out.println("Member:" + mem);
-
-			// 강의평
-			request.setCharacterEncoding("euc-kr");
-			List<Subject_info2> list2 = dao.subject2();
-			request.setAttribute("list2", list2);
-			System.out.println(list2);
-			// 자유게시판
-			List<Board> list3 = dao.boardselect();
-			request.setAttribute("list3", list3);
-			// 과목명
-			String semester = request.getParameter("semester");
-			if (semester == null) {
-				semester = dao.selectsemester(login);
-				System.out.println("학기 : " + semester);
-				if (semester == null) {
-					semester = "1-1";
-				}
-			}
-			List<GradeInfo> list = dao.subjectinfo(semester, login);
-			request.setAttribute("gradeInfo", list);
-			request.setAttribute("semester3", semester);
+			
 			return new ActionForward(); // 검증에서 아무것도 걸린게 없으면 true
 		}
 		// 검증에서 걸린게 있으면
 		return new ActionForward(false, "../alert.jsp");
 	}
 
+	// 메인화면 게시판 로드하는 메서드
+	public BoardResponseDTO boardlist(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, UnsupportedEncodingException {
+		BoardResponseDTO data = new BoardResponseDTO();
+		data.setSuccess(true);
+		// 자유게시판
+		List<Board> list3 = dao.boardselect();
+		if(list3.isEmpty()) {
+			data.setSuccess(false);
+			data.setMessage("아직 작성된 게시글이 없어요");
+		}else {
+			data.setList3(list3);
+		}
+		return data;
+	}
+	// 메인화면 과목리스트 로드하는 메서드
+	public SubjectResponseDTO subjectlist(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, UnsupportedEncodingException {
+		SubjectResponseDTO data = new SubjectResponseDTO();
+		data.setSuccess(true);
+		
+		String login = (String) request.getSession().getAttribute("login");
+		
+		String semester = request.getParameter("semester");
+		if (semester == null) {
+			 semester = "1-1";
+		}
+		request.setAttribute("semester3", semester);
+		
+		
+		List<GradeInfo> list = dao.subjectinfo(semester, login);
+		if(list.isEmpty()) { // 학기에 수강과목으로 담은 과목이 없으면
+			data.setMessage("수강과목으로 담은 과목이 없어요");
+			data.setSuccess(false);
+		}else {
+			data.setGradeInfo(list);
+		}
+		return data;
+	}
+	// 메인화면 강의평 로드하는 메서드
+	public EvalResponseDTO evallist(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, UnsupportedEncodingException {
+		EvalResponseDTO data = new EvalResponseDTO();
+		data.setSuccess(true);
+		
+		List<Subject_info2> list2 = dao.subject2();
+		if(list2.isEmpty()) { // 학기에 수강과목으로 담은 과목이 없으면
+			data.setMessage("작성된 강의평이 없어요");
+			data.setSuccess(false);
+		}else {
+			data.setList2(list2);
+		}
+		return data;
+	}
+	
 	public ActionForward gradeview(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, UnsupportedEncodingException {
 		// 평균평점
@@ -537,32 +575,33 @@ public class MemberAllAction {
 		System.out.println("id : " + id);
 		boolean result = dao.duplicateIdCheck(id);
 
-		//response.setContentType("text/html;charset=euc-kr");
-	//	PrintWriter out = response.getWriter();
+		// response.setContentType("text/html;charset=euc-kr");
+		// PrintWriter out = response.getWriter();
 		System.out.println(result);
 		if (result) {
-			//out.println("0"); // 아이디 중복
+			// out.println("0"); // 아이디 중복
 			request.setAttribute("result", 0);
 		} else {
-			//out.println("1");
+			// out.println("1");
 			request.setAttribute("result", 1);
 		}
 
-		//out.close();
+		// out.close();
 		return new ActionForward();
 	}
+
 	public ActionForward secession(HttpServletRequest request, HttpServletResponse response) {
 		String login = (String) request.getSession().getAttribute("login");
 		String msg = null;
-		
-		if(dao.secession(login)){
+
+		if (dao.secession(login)) {
 			msg = "탈퇴되셨습니다.";
-		}else {
+		} else {
 			msg = "탈퇴실패";
 		}
 		request.setAttribute("msg", msg);
 		return new ActionForward(false, "secession.jsp");
-		
+
 	}
 
 }

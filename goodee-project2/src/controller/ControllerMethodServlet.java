@@ -2,6 +2,7 @@ package controller;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.lang.reflect.Method;
 import java.util.Properties;
 
@@ -13,6 +14,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.google.gson.Gson;
 
 import action.ActionForward;
 import action.member.MemberAllAction;
@@ -78,6 +81,11 @@ public class ControllerMethodServlet  extends HttpServlet{
 		}catch(NullPointerException e) {
 			forward = new ActionForward();
 			//e.printStackTrace();
+		}catch(ClassCastException e) { // MemberAllAction 클래스의 메서드에서
+			// 리턴값이 ActionForward가 아니라 다른 클래스타입이면 클래스 형변환이
+			// 불가능하기 때문에 forward를 null처리
+			// => ajax 리턴값 처리를 위해서
+			forward = null;
 		}catch(Exception e) {
 			throw new ServletException(e);
 		}
@@ -91,7 +99,25 @@ public class ControllerMethodServlet  extends HttpServlet{
 				RequestDispatcher disp = request.getRequestDispatcher(forward.getView());
 				disp.forward(request,  response);
 			} 
-		}else response.sendRedirect("nopage.jsp");
+		}
+		else { // ajax callback함수
+			// 결과 값을 위해 object를 json 형식으로 전달하도록
+			String jsonResult = null;
+			String methodName = pr.getProperty(command); 
+			try {
+				Method method = MemberAllAction.class.getMethod(methodName, paramType);
+				Object result = method.invoke(action, paramObjs);
+
+				jsonResult = new Gson().toJson(result);
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+			
+			response.setContentType("application/json");
+			PrintWriter out = response.getWriter();
+			out.print(jsonResult);
+			out.flush();
+		}//else response.sendRedirect("nopage.jsp");
 		
 	}
 	// 클라이언트 POST 방식 요청시 호출되는 메서드 
