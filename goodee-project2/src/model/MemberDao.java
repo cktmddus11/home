@@ -209,10 +209,10 @@ public class MemberDao {
 		}
 		return null;
 	}
-	public List<Subject_info2> subject2() {
+	public List<Subject_info2> subject2(String limit) {
 		SqlSession session = DBConnection.getConnection();
 		try {
-			List<Subject_info2> list = session.getMapper(cls).subject2();
+			List<Subject_info2> list = session.getMapper(cls).subject2(limit);
 			return list;
 		}catch(Exception e) {
 			e.printStackTrace();
@@ -283,10 +283,10 @@ public class MemberDao {
 		}
 		return null;
 	}
-	public List<Board> boardselect() {
+	public List<Board> boardselect(String limit) {
 		SqlSession session = DBConnection.getConnection();
 		try {
-			List<Board> list = session.getMapper(cls).boardselect();
+			List<Board> list = session.getMapper(cls).boardselect(limit);
 			return list;
 		}catch(Exception e) {
 			e.printStackTrace();

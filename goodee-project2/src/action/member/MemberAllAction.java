@@ -148,7 +148,8 @@ public class MemberAllAction {
 		BoardResponseDTO data = new BoardResponseDTO();
 		data.setSuccess(true);
 		// 자유게시판
-		List<Board> list3 = dao.boardselect();
+		String limit = "L";
+		List<Board> list3 = dao.boardselect(limit);
 		if(list3.isEmpty()) {
 			data.setSuccess(false);
 			data.setMessage("아직 작성된 게시글이 없어요");
@@ -169,12 +170,12 @@ public class MemberAllAction {
 		if (semester == null) {
 			 semester = "1-1";
 		}
-		request.setAttribute("semester3", semester);
+		data.setSemseter3(semester);
 		
 		
 		List<GradeInfo> list = dao.subjectinfo(semester, login);
 		if(list.isEmpty()) { // 학기에 수강과목으로 담은 과목이 없으면
-			data.setMessage("수강과목으로 담은 과목이 없어요");
+			data.setMessage("수강과목으로 담은 과목이 없어요. <br>수강과목으로 담으면 강의평을 작성할 수 있어요");
 			data.setSuccess(false);
 		}else {
 			data.setGradeInfo(list);
@@ -187,7 +188,8 @@ public class MemberAllAction {
 		EvalResponseDTO data = new EvalResponseDTO();
 		data.setSuccess(true);
 		
-		List<Subject_info2> list2 = dao.subject2();
+		String limit = "L";
+		List<Subject_info2> list2 = dao.subject2(limit);
 		if(list2.isEmpty()) { // 학기에 수강과목으로 담은 과목이 없으면
 			data.setMessage("작성된 강의평이 없어요");
 			data.setSuccess(false);

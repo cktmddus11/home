@@ -29,22 +29,27 @@ function writeform2click(a){
 		</div>
 		<div class="card-body">
 		<select name="select2" onchange="semester(this.value)">
-				<option value="1-1" <c:if test="${semester3 eq '1-1'}">selected</c:if>>1학년 1학기</option>
-				<option value="1-2" <c:if test="${semester3 eq '1-2'}">selected</c:if>>1학년 2학기</option>
-				<option value="2-1" <c:if test="${semester3 eq '2-1'}">selected</c:if>>2학년 1학기</option>
-				<option value="2-2" <c:if test="${semester3 eq '2-2'}">selected</c:if>>2학년 2학기</option>
-				<option value="3-1" <c:if test="${semester3 eq '3-1'}">selected</c:if>>3학년 1학기</option>
-				<option value="3-2" <c:if test="${semester3 eq '3-2'}">selected</c:if>>3학년 2학기</option>
-				<option value="4-1" <c:if test="${semester3 eq '4-1'}">selected</c:if>>4학년 1학기</option>
-				<option value="4-2" <c:if test="${semester3 eq '4-2'}">selected</c:if>>4학년 2학기</option>
+				<option value="1-1">1학년 1학기</option>
+				<option value="1-2">1학년 2학기</option>
+				<option value="2-1">2학년 1학기</option>
+				<option value="2-2">2학년 2학기</option>
+				<option value="3-1">3학년 1학기</option>
+				<option value="3-2">3학년 2학기</option>
+				<option value="4-1">4학년 1학기</option>
+				<option value="4-2">4학년 2학기</option>
 			</select><br>
 			<br>
 			<table id="change" class="w3-table-all" style="width : 100%;">
+				<thead>
 				<tr>
-					<td>수업</td>
-					<td>강의평 작성</td>
+					<th>수업</th>
+					<th>강의평 작성</th>
 				</tr>
-				<c:if test="${!empty gradeInfo}">
+				</thead>
+				<tbody>
+					
+				</tbody>
+				<%-- <c:if test="${!empty gradeInfo}">
 				<c:forEach var = "list" items="${gradeInfo}">
 				<tr>
 					<input type="hidden" name="subject_no" value="${list.subject_no}">
@@ -57,7 +62,7 @@ function writeform2click(a){
 					<tr>
 						<td colspan="2">강의평을 작성하려면 학점계산기-성적관리에서 수업를 등록해야합니다</td>
 					</tr>
-				</c:if>
+				</c:if> --%>
 			</table>
 		
 		

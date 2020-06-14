@@ -9,10 +9,10 @@
 				<table class="w3-table-all" id="boardtable">
 				<thead>
 				<tr>
-					<td>작성자</td>
-					<td>제목</td>
-					<td>추천수</td>
-					<td>조회수</td>
+					<th>작성자</th>
+					<th>제목</th>
+					<th>추천수</th>
+					<th>조회수</th>
 				
 				</tr>
 				</thead>

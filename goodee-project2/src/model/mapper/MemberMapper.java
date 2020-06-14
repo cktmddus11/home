@@ -113,11 +113,12 @@ public interface MemberMapper {
 	
 	
 	// 메인 화면 - 학과 관련없이보는 강의평
-	@Select("select *, (select subject From select_info2 s1 where s1.subject_no = s2.subject_no) subject" + 
+	@Select("<script>select *, (select subject From select_info2 s1 where s1.subject_no = s2.subject_no) subject" + 
 			" from subject_info s2, select_info2 " + 
 			" where s2.subject_no = select_info2.subject_no and s2.eval_text is not null" + 
-			" order by eval_date desc")
-	List<Subject_info2> subject2();
+			" order by eval_date desc"
+			+ "<if test='value != null'> limit 5</if></script>")
+	List<Subject_info2> subject2(String limit);
 
 	// 원그래프
 	@Select("select " + 
@@ -167,12 +168,14 @@ public interface MemberMapper {
 	List<String> score(int subject_no);
 
 	// 메인페이지 게시판
-	@Select("select num, mem_id, readcnt,"
+	@Select("<script>select num, mem_id, readcnt,"
 			+ "(select mem_nickname from member where member.mem_id =board.mem_id) nickname, "
 			+ "title, regdate, "
 			+ "(select count(*) from up where up.num = board.num) up "
-			+ "from board order by up desc, readcnt desc")
-	List<Board> boardselect();
+			+ "from board order by up desc, readcnt desc"
+			+"<if test='value != null'> limit 6</if>"// limit 값이 있으면 메인화면에 게시글 상위 6개만 출력하려고
+			+ "</script>") 
+	List<Board> boardselect(String limit);
 
 	
 	@Select("select count(*)from subject_info where eval_text is not null and semester_code = #{semester} and mem_id = #{login} and subject_no= #{subject_no}")

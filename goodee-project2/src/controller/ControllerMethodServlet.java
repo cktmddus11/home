@@ -113,7 +113,7 @@ public class ControllerMethodServlet  extends HttpServlet{
 				e.printStackTrace();
 			}
 			
-			response.setContentType("application/json");
+			response.setContentType("application/json;charset=euc-kr");
 			PrintWriter out = response.getWriter();
 			out.print(jsonResult);
 			out.flush();
